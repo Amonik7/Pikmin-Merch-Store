@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8" />
+        <title>Cage Area</title>
+        <meta content="dark light" name="color-scheme">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <p id="HELPME" style="font-size: 40px;">Finally, FREEDOM! Don't worry, I disabled the "Lock up" button so he won't lock you up.</p>
+        <button id="cageButton">Lock yourself</button>
+        <button onclick="buttonSwap()" id="fakeFree">Free yourself</button>
+        <script>
+            var started
+            started = 0
+            function buttonSwap(){
+                if (started == 0){
+                document.getElementById("cageButton").innerHTML = "Free yourself"
+                document.getElementById("fakeFree").innerHTML = "Lock yourself"
+                document.getElementById("HELPME").textContent = "Finally, FREEDOM! Don't worry, I disabled the 'Lock up' button so he won't lock you up-"
+                setTimeout(bootProcess, 400)
+                started = 1
+            }
+            }
+            function bootProcess(){
+                document.getElementById("HELPME").textContent = "..."
+                setTimeout(openBootWindow, 100)
+            }
+            function openBootWindow(){
+                window.open("file:///users/amonrosik/Desktop/Website/bossboot.html")
+                window.close()
+                setTimeout(part3, 800)
+            }
+            function part3(){
+                document.getElementById("HELPME").textContent = "Uh-oh."
+                window.close()
+            }
+        </script>
+        </body>
+        </html>

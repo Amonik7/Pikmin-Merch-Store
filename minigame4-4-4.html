@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8" />
+        <title>Minigame 4</title>
+        <meta content="dark light" name="color-scheme">
+    </head>
+    <body style="background-image: url(space5.jpeg); background-size: 100%;">
+        Type the amount of imagges you had to guess in 4-3 to get the key from the Key Dee!<br>
+        <img src="keydee.jpeg"><br>
+        <button onclick="q()">Q</button><button onclick="w()">W</button><button onclick="e()">E</button><button onclick="r()">R</button><button onclick="t()">T</button><button onclick="z()">Z</button><button onclick="u()">U</button><button onclick="i()">I</button><button onclick="o()">O</button><button onclick="p()">P</button><button onclick="ü()">Ü</button><button onclick="erase()">ERASE</button>
+        <br><button onclick="a()" style="margin-left: 10px">A</button><button onclick="s()">S</button><button onclick="d()">D</button><button onclick="f()">F</button><button onclick="g()">G</button><button onclick="h()">H</button><button onclick="j()">J</button><button onclick="k()">K</button><button onclick="l()">L</button><button onclick="ö()">Ö</button><button onclick="ä()">Ä</button>
+        <br><button onclick="y()" style="margin-left: 21px">Y</button><button onclick="x()">X</button><button onclick="c()">C</button><button onclick="v()">V</button><button onclick="b()">B</button><button onclick="n()">N</button><button onclick="m()">M</button>
+        <br><button id="submitButton" style="margin-left: 50px">Submit</button><button onclick="spacebar()">SPACE</button>
+        <br><p id="output"></p><br>
+        <p id="1"></p>
+        <p id="2"></p>
+        <p id="3"></p>
+        <br>
+        <br><br><br><br><br><br><marquee scrollamount="50px"><a href="minigame5.html" id="key" style="width:200px; height: 10px"></a></marquee><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><a href="hintfor4-2.html">Hint</a>
+    <script>
+    var impossible10
+    impossible10 = 0
+         document.getElementById("submitButton").addEventListener("click", function(){
+    var input
+    
+        input = document.getElementById("output").textContent
+        
+        if (input == "IMAGGES"){
+            document.getElementById("output").textContent += " (Correct!)"
+            impossible10 = 1
+        }
+        if (impossible10 == 1){
+            document.getElementById("key").textContent = "key"
+        }
+    })
+    function a(){
+        document.getElementById("output").textContent += "A"
+    }
+    function spacebar(){
+        document.getElementById("output").textContent += "_"
+    }
+    function b(){
+        document.getElementById("output").textContent += "B"
+    }
+    function c(){
+        document.getElementById("output").textContent += "C"
+    }
+    function d(){
+        document.getElementById("output").textContent += "D"
+    }
+    function e(){
+        document.getElementById("output").textContent += "E"
+    }
+    function f(){
+        document.getElementById("output").textContent += "F"
+    }
+    function g(){
+        document.getElementById("output").textContent += "G"
+    }
+    function h(){
+        document.getElementById("output").textContent += "H"
+    }
+    function i(){
+        document.getElementById("output").textContent += "I"
+    }
+    function j(){
+        document.getElementById("output").textContent += "J"
+    }
+    function k(){
+        document.getElementById("output").textContent += "K"
+    }
+    function l(){
+        document.getElementById("output").textContent += "L"
+    }
+    function m(){
+        document.getElementById("output").textContent += "M"
+    }
+    function n(){
+        document.getElementById("output").textContent += "N"
+    }
+    function o(){
+        document.getElementById("output").textContent += "O"
+    }
+    function p(){
+        document.getElementById("output").textContent += "P"
+    }
+    function q(){
+        document.getElementById("output").textContent += "Q"
+    }
+    function r(){
+        document.getElementById("output").textContent += "R"
+    }
+    function s(){
+        document.getElementById("output").textContent += "S"
+    }
+    function t(){
+        document.getElementById("output").textContent += "T"
+    }
+    function u(){
+        document.getElementById("output").textContent += "U"
+    }
+    function v(){
+        document.getElementById("output").textContent += "V"
+    }
+    function w(){
+        document.getElementById("output").textContent += "W"
+    }
+    function x(){
+        document.getElementById("output").textContent += "X"
+    }
+    function y(){
+        document.getElementById("output").textContent += "Y"
+    }
+    function z(){
+        document.getElementById("output").textContent += "Z"
+    }
+    function ä(){
+        document.getElementById("output").textContent += "Ä"
+    }
+    function ö(){
+        document.getElementById("output").textContent += "Ö"
+    }
+    function ü(){
+        document.getElementById("output").textContent += "Ü"
+    }
+    function erase(){
+        document.getElementById("output").textContent = ""
+    }
+    </script>
+    </body>
+</html>

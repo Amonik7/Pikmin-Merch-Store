@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8" />
+        <title>Cage Area</title>
+        <meta content="dark light" name="color-scheme">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <p id="percentage" style="font-family: Trebuchet MS; font-size: 70px">BOSS BOOT SCRIPT LOADING</p>
+        <script>
+            var percentage
+            percentage = 0
+            function bossBootup(){
+                if (percentage < 100){
+                percentage = percentage + Math.round(Math.random()*2.5+0.2)
+                console.log(percentage)
+            if (percentage > 100){
+                percentage = 100
+            }
+            } else {
+                window.open("file:///users/amonrosik/Desktop/Website/TrueBossfight.html")
+                window.close("F")
+            }
+            document.getElementById("percentage").innerHTML = "BOSS BOOT LOGIC: "
+            document.getElementById("percentage").innerHTML += percentage
+            document.getElementById("percentage").innerHTML += "%"
+            }
+            function load1(){
+            setTimeout(load2, Math.random()*1000+300)
+            document.getElementById("percentage").innerHTML += "."
+            }
+            function load2(){
+            setTimeout(load3, Math.random()*1000+300)
+            document.getElementById("percentage").innerHTML += "."
+            }
+            function load3(){
+            setTimeout(loadComplete, Math.random()*1000+300)
+            document.getElementById("percentage").innerHTML += "."
+            }
+            function loadComplete(){
+            setTimeout(startBootup, Math.random()*1200+1300)
+            document.getElementById("percentage").innerHTML = "BOSS BOOT SCRIPT LOAD COMPLETE! STARTING..."
+            }
+            function startBootup(){
+            setInterval(bossBootup, 50)
+            }
+            setTimeout(load1, Math.random()*700+300)
+        </script>
+        <p>Click somewhere, otherwise the bossfight won't load for some reason!</p>
+        </body>
+        </html> 
+       

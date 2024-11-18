@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8" />
+        <title id="title">Cage Area</title>
+        <meta content="dark light" name="color-scheme">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div onmousemove="getCursor(event)" id="demo">
+  <div id="info"></div>
+</div>
+        <p id="HELPME" style="font-size: 40px; margin-top: -1000px">Finally, FREEDOM! Don't worry, I disabled the "Lock up" button so he won't lock you up.</p>
+        <script>
+            var started
+            started = 0
+                document.getElementById("HELPME").textContent = "Copy the URL! You should, because the window will end up closing a ton. And you probably wouldn't even be here without interacting with the prior website. I'm here to give you tips whenever you need them!"
+                setTimeout(bootProcess, 400)
+                started = 1
+                function getCursor(event) {
+                    let x = event.clientX;
+                    let y = event.clientY;
+                    let _position = `X: ${x}<br>Y: ${y}`;
+                
+                    const infoElement = document.getElementById('info');
+                    infoElement.innerHTML = _position;
+                    infoElement.style.top = y + "px";
+                    infoElement.style.left = (x + 20) + "px";
+                }
+        </script>
+        <a href="https://store.steampowered.com/app/405640/Pony_Island/?l=english" style="color: #121212;">Check out what this part was inspired by!</a>
+        </body>
+        </html>

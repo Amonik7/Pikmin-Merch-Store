@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8" />
+        <title>Minigame 3</title>
+        <meta content="dark light" name="color-scheme">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="background-image: url(glitch.jpeg); background-repeat: no-repeat">
+        This is the code chamber! Note: <a style="color: red">DON'T FREE THE PRISONERS!</a>
+<br><br>
+You need to input the first letter of each number chain of the code..<br><br><br><br>
+YOU can't possibly know the code...<textarea style="margin-bottom: -4px" rows="1" id="impossible1"></textarea><br><br>
+<button id="submitButton">Submit</button><br><br><br>
+<br><span><p>Submitted Code:</p><p id="check1"></p></span><br><br>
+<br><br>
+<a href="finale.html"><p id="continue"></p></a>
+<script>
+    document.getElementById("submitButton").addEventListener("click", function(){
+    var impossible1
+    var impossible2
+    var impossible10
+    var impossible20
+
+        impossible1 = document.getElementById("impossible1").value
+        
+        document.getElementById("check1").textContent = impossible1
+
+        if (impossible1 == "2421641"){
+            document.getElementById("check1").textContent += " (Correct!)"
+            impossible10 = 1
+        } else {
+            impossible10 = 0
+        }
+        if (impossible10 == 1){
+            document.getElementById("continue").textContent = "YOU LITTLE SH- I'LL BEAT YOU UP! COME HERE!"
+        }
+    })
+</script>
+ </body>
+</html>

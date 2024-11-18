@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8" />
+        <title id="title">Cage Area</title>
+        <meta content="dark light" name="color-scheme">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="background-image: url(glitch3.jpeg); background-size: 100%;">
+        <p style="text-align: center; font-size: 30px" id="mom"></p>
+        <div id="riddlerSummon" style="text-align: center"></div>
+        <p id="filename.exe" style="font-size: 18px; text-align: center"></p>
+        <a style="text-shadow: -4px 0 red, -2px -2px orange, 0 -4px yellow, 2px -2px lime, 4px 0 cyan, 2px 2px blue, 0 4px purple, -1px 1px magenta; color: black"><p id="speak1" style="text-align: center; margin-top: 10px; font-size: 35px"></p></a>
+        <a style="text-shadow: -4px 0 red, -2px -2px orange, 0 -4px yellow, 2px -2px lime, 4px 0 cyan, 2px 2px blue, 0 4px purple, -1px 1px magenta; color: black"><p id="speak2" style="text-align: center; font-size: 35px"></p></a>
+        <a style="text-shadow: -4px 0 red, -2px -2px orange, 0 -4px yellow, 2px -2px lime, 4px 0 cyan, 2px 2px blue, 0 4px purple, -1px 1px magenta; color: black"><p id="speak3" style="text-align: center; font-size: 35px"></p></a>
+        <a style="text-shadow: -4px 0 red, -2px -2px orange, 0 -4px yellow, 2px -2px lime, 4px 0 cyan, 2px 2px blue, 0 4px purple, -1px 1px magenta"><p id="speakwon1" style="text-align: center; margin-top: 10px; font-size: 35px"></p></a>
+        <a style="text-shadow: -4px 0 red, -2px -2px orange, 0 -4px yellow, 2px -2px lime, 4px 0 cyan, 2px 2px blue, 0 4px purple, -1px 1px magenta"><p id="speakwon2" style="text-align: center; font-size: 35px"></p></a>
+        <a style="text-shadow: -4px 0 red, -2px -2px orange, 0 -4px yellow, 2px -2px lime, 4px 0 cyan, 2px 2px blue, 0 4px purple, -1px 1px magenta"><p id="speakwon3" style="text-align: center; font-size: 35px"></p></a>
+        <a style="text-shadow: -4px 0 red, -2px -2px red, 0 -4px red, 2px -2px red, 4px 0 red, 2px 2px red, 0 4px red, -1px 1px red; color: black"><p id="speaklost1" style="text-align: center; font-size: 35px"></p></a>
+        <a style="text-shadow: -4px 0 red, -2px -2px red, 0 -4px red, 2px -2px red, 4px 0 red, 2px 2px red, 0 4px red, -1px 1px red; color: black"><p id="speaklost2" style="text-align: center; font-size: 35px"></p></a>
+        <div id="inputSummon" style="text-align: center">
+
+            
+        
+        </div>
+        <script>
+            var inputtedamount = 0
+            var correctAnswer = 0
+            var filenameInput = 0
+            var level = 1
+            var digit21 = 0
+            var digit22 = 0
+            var digit23 = 0
+            var digit24 = 0
+            var digit25 = 0
+            var digit26 = 0
+            var disgusting = "puke"
+            function talk1(){
+                document.getElementById("speak1").textContent = "Y"
+                setTimeout(talk2, 150)
+            }
+            function talk2(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk3, 150)
+            }
+            function talk3(){
+                document.getElementById("speak1").textContent += "U"
+                setTimeout(talk4, 150)
+            }
+            function talk4(){
+                document.getElementById("speak1").textContent += "'"
+                setTimeout(talk5, 150)
+            }
+            function talk5(){
+                document.getElementById("speak1").textContent += "R"
+                setTimeout(talk6, 150)
+            }
+            function talk6(){
+                document.getElementById("speak1").textContent += "E"
+                setTimeout(talk7, 150)
+            }
+            function talk7(){
+                document.getElementById("speak1").textContent += " "
+                setTimeout(talk8, 150)
+            }
+            function talk8(){
+                document.getElementById("speak1").textContent += "I"
+                setTimeout(talk9, 150)
+            }
+            function talk9(){
+                document.getElementById("speak1").textContent += "N"
+                setTimeout(talk10, 150)
+            }
+            function talk10(){
+                document.getElementById("speak1").textContent += " "
+                setTimeout(talk11, 150)
+            }
+            function talk11(){
+                document.getElementById("speak1").textContent += "M"
+                setTimeout(talk12, 150)
+            }
+            function talk12(){
+                document.getElementById("speak1").textContent += "Y"
+                setTimeout(talk13, 250)
+            }
+            function talk13(){
+                document.getElementById("speak2").textContent += "R"
+                setTimeout(talk14, 150)
+            }
+            function talk14(){
+                document.getElementById("speak2").textContent += "E"
+                setTimeout(talk15, 150)
+            }
+            function talk15(){
+                document.getElementById("speak2").textContent += "A"
+                setTimeout(talk16, 150)
+            }
+            function talk16(){
+                document.getElementById("speak2").textContent += "L"
+                setTimeout(talk17, 150)
+            }
+            function talk17(){
+                document.getElementById("speak2").textContent += "M"
+                setTimeout(talk18, 150)
+            }
+            function talk18(){
+                document.getElementById("speak2").textContent += " "
+                setTimeout(talk19, 150)
+            }
+            function talk19(){
+                document.getElementById("speak2").textContent += "N"
+                setTimeout(talk20, 150)
+            }
+            function talk20(){
+                document.getElementById("speak2").textContent += "O"
+                setTimeout(talk21, 150)
+            }
+            function talk21(){
+                document.getElementById("speak2").textContent += "W"
+                setTimeout(talk22, 150)
+            }
+            function talk22(){
+                document.getElementById("speak2").textContent += ","
+                setTimeout(talk23, 250)
+            }
+            function talk23(){
+                document.getElementById("speak3").textContent += "G"
+                setTimeout(talk24, 150)
+            }
+            function talk24(){
+                document.getElementById("speak3").textContent += "A"
+                setTimeout(talk25, 150)
+            }
+            function talk25(){
+                document.getElementById("speak3").textContent += "M"
+                setTimeout(talk26, 150)
+            }
+            function talk26(){
+                document.getElementById("speak3").textContent += "E"
+                setTimeout(talk27, 150)
+            }
+            function talk27(){
+                document.getElementById("speak3").textContent += "R"
+                setTimeout(talk28, 150)
+            }
+            function talk28(){
+                document.getElementById("speak3").textContent += "."
+                setTimeout(talk29, 150)
+            }
+            function talk29(){
+                document.getElementById("speak3").textContent += "."
+                setTimeout(talk30, 150)
+                filenameInput = (Math.floor(Math.random() * 900)) + 100
+                correctAnswer = filenameInput
+            }
+            var i = 0
+            function talk30(){
+                if (i < 104){
+                document.getElementById("speak3").textContent += "."
+                if (i != 1) {
+                    console.log(`FUCK YOURSELF ${i} TIMES! Sincerely, riddlemaster.exe`)
+                } else {
+                    console.log(`FUCK YOURSELF ${i} TIME! Sincerely, riddlemaster.exe`) 
+                }
+                if (i == 28){
+                    document.getElementById("filename.exe").textContent = "when the textarea appears,"
+                }
+                if (i == 77){
+                    document.getElementById("filename.exe").textContent = "type "
+                    document.getElementById("filename.exe").textContent += filenameInput
+                }
+                if (i == 99){
+                    document.getElementById("filename.exe").textContent = "riddlemaster.exe"
+                }
+                i = i + 1
+                setTimeout(talk30, 50)
+                } else {
+                    console.log(`FUCK YOURSELF ${i * Math.random() * 100 + 100} MORE TIMES FOR LOOKING IN THE CONSOLE!`)
+                    talk31()
+                }
+            }
+            function talk31(){
+                document.getElementById("speak1").textContent = "$$$§$$ $$ $$"
+                document.getElementById("speak2").textContent = "$$$$$ $$$§"
+                document.getElementById("speak3").textContent = "$$$$$§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§"
+                setTimeout(talk32, 150)
+            }
+            function talk32(){
+                document.getElementById("speak1").textContent = ""
+                document.getElementById("speak2").textContent = ""
+                document.getElementById("speak3").textContent = ""
+                setTimeout(talk33, 150)
+            }
+            function talk33(){
+                document.getElementById("speak1").textContent += "N"
+                setTimeout(talk34, 150)
+            }
+            function talk34(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk35, 150)
+            }
+            function talk35(){
+                document.getElementById("speak1").textContent += "W"
+                setTimeout(talk36, 150)
+            }
+            function talk36(){
+                document.getElementById("speak1").textContent += ","
+                setTimeout(talk37, 150)
+            }
+            function talk37(){
+                document.getElementById("speak1").textContent += " "
+                setTimeout(talk38, 150)
+            }
+            function talk38(){
+                document.getElementById("speak1").textContent += "D"
+                setTimeout(talk39, 150)
+            }
+            function talk39(){
+                document.getElementById("speak1").textContent += "I"
+                setTimeout(talk40, 150)
+            }
+            function talk40(){
+                document.getElementById("speak1").textContent += "D"
+                setTimeout(talk41, 150)
+            }
+            function talk41(){
+                document.getElementById("speak1").textContent += " "
+                setTimeout(talk42, 150)
+            }
+            function talk42(){
+                document.getElementById("speak1").textContent += "Y"
+                setTimeout(talk43, 150)
+            }
+            function talk43(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk44, 150)
+            }
+            function talk44(){
+                document.getElementById("speak1").textContent += "U"
+                setTimeout(talk45, 250)
+            }
+            function talk45(){
+                document.getElementById("speak2").textContent += "P"
+                setTimeout(talk46, 150)
+            }
+            function talk46(){
+                document.getElementById("speak2").textContent += "A"
+                setTimeout(talk47, 150)
+            }
+            function talk47(){
+                document.getElementById("speak2").textContent += "Y"
+                setTimeout(talk48, 150)
+            }
+            function talk48(){
+                document.getElementById("speak2").textContent += " "
+                setTimeout(talk49, 150)
+            }
+            function talk49(){
+                document.getElementById("speak2").textContent += "A"
+                setTimeout(talk50, 150)
+            }
+            function talk50(){
+                document.getElementById("speak2").textContent += "T"
+                setTimeout(talk51, 150)
+            }
+            function talk51(){
+                document.getElementById("speak2").textContent += "T"
+                setTimeout(talk52, 150)
+            }
+            function talk52(){
+                document.getElementById("speak2").textContent += "E"
+                setTimeout(talk53, 150)
+            }
+            function talk53(){
+                document.getElementById("speak2").textContent += "N"
+                setTimeout(talk54, 150)
+            }
+            function talk54(){
+                document.getElementById("speak2").textContent += "T"
+                setTimeout(talk55, 150)
+            }
+            function talk55(){
+                document.getElementById("speak2").textContent += "I"
+                setTimeout(talk56, 150)
+            }
+            function talk56(){
+                document.getElementById("speak2").textContent += "O"
+                setTimeout(talk57, 150)
+            }
+            function talk57(){
+                document.getElementById("speak2").textContent += "N"
+                setTimeout(talk58, 150)
+            }
+            function talk58(){
+                document.getElementById("speak2").textContent += "?"
+                setTimeout(summonInput, 350)
+            }
+            function talk59(){
+                document.getElementById("speak1").textContent += "Y"
+                setTimeout(talk60, 150)
+            }
+            function talk60(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk61, 150)
+            }
+            function talk61(){
+                document.getElementById("speak1").textContent += "U"
+                setTimeout(talk62, 150)
+            }
+            function talk62(){
+                document.getElementById("speak1").textContent += " "
+                setTimeout(talk63, 150)
+            }
+            function talk63(){
+                document.getElementById("speak1").textContent += "S"
+                setTimeout(talk64, 150)
+            }
+            function talk64(){
+                document.getElementById("speak1").textContent += "E"
+                setTimeout(talk65, 150)
+            }
+            function talk65(){
+                document.getElementById("speak1").textContent += "E"
+                setTimeout(talk66, 150)
+            }
+            function talk66(){
+                document.getElementById("speak1").textContent += "M"
+                setTimeout(talk67, 150)
+            }
+            function talk67(){
+                document.getElementById("speak1").textContent += " "
+                setTimeout(talk68, 150)
+            }
+            function talk68(){
+                document.getElementById("speak1").textContent += "T"
+                setTimeout(talk69, 150)
+            }
+            function talk69(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk70, 250)
+            }
+            function talk70(){
+                document.getElementById("speak2").textContent += "B"
+                setTimeout(talk71, 150)
+            }
+            function talk71(){
+                document.getElementById("speak2").textContent += "E"
+                setTimeout(talk72, 550)
+            }
+            function talk72(){
+                document.getElementById("speak2").textContent = ""
+                document.getElementById("speak1").textContent = "G"
+                setTimeout(talk73, 150)
+            }
+            function talk73(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk74, 150)
+            }
+            function talk74(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk75, 150)
+            }
+            function talk75(){
+                document.getElementById("speak1").textContent += "D"
+                setTimeout(talk76, 250)
+            }
+            function talk76(){
+                document.getElementById("speak1").textContent += " A"
+                setTimeout(talk77, 150)
+            }
+            function talk77(){
+                document.getElementById("speak1").textContent += "T"
+                setTimeout(talk78, 250)
+            }
+            function talk78(){
+                document.getElementById("speak1").textContent += " F"
+                setTimeout(talk79, 150)
+            }
+            function talk79(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk80, 150)
+            }
+            function talk80(){
+                document.getElementById("speak1").textContent += "L"
+                setTimeout(talk81, 150)
+            }
+            function talk81(){
+                document.getElementById("speak1").textContent += "L"
+                setTimeout(talk82, 150)
+            }
+            function talk82(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk83, 150)
+            }
+            function talk83(){
+                document.getElementById("speak1").textContent += "W"
+                setTimeout(talk84, 150)
+            }
+            function talk84(){
+                document.getElementById("speak1").textContent += "I"
+                setTimeout(talk85, 150)
+            }
+            function talk85(){
+                document.getElementById("speak1").textContent += "N"
+                setTimeout(talk86, 150)
+            }
+            function talk86(){
+                document.getElementById("speak1").textContent += "G"
+                setTimeout(talk87, 250)
+            }
+            function talk87(){
+                document.getElementById("speak2").textContent += "O"
+                setTimeout(talk88, 150)
+            }
+            function talk88(){
+                document.getElementById("speak2").textContent += "R"
+                setTimeout(talk89, 150)
+            }
+            function talk89(){
+                document.getElementById("speak2").textContent += "D"
+                setTimeout(talk90, 150)
+            }
+            function talk90(){
+                document.getElementById("speak2").textContent += "E"
+                setTimeout(talk91, 150)
+            }
+            function talk91(){
+                document.getElementById("speak2").textContent += "R"
+                setTimeout(talk92, 150)
+            }
+            function talk92(){
+                document.getElementById("speak2").textContent += "S"
+                setTimeout(talk93, 150)
+            }
+            function talk93(){
+                document.getElementById("speak2").textContent += "."
+                setTimeout(talk94, 950)
+            }
+            function talk94(){
+                document.getElementById("speak2").textContent = ""
+                document.getElementById("speak1").textContent = "B"
+                setTimeout(talk95, 150)
+            }
+            function talk95(){
+                document.getElementById("speak1").textContent += "U"
+                setTimeout(talk96, 150)
+            }
+            function talk96(){
+                document.getElementById("speak1").textContent += "T"
+                setTimeout(talk97, 150)
+            }
+            function talk97(){
+                document.getElementById("speak1").textContent += " H"
+                setTimeout(talk98, 150)
+            }
+            function talk98(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk99, 150)
+            }
+            function talk99(){
+                document.getElementById("speak1").textContent += "W"
+                setTimeout(talk100, 150)
+            }
+            function talk100(){
+                document.getElementById("speak1").textContent += " G"
+                setTimeout(talk101, 150)
+            }
+            function talk101(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk102, 150)
+            }
+            function talk102(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk103, 150)
+            }
+            function talk103(){
+                document.getElementById("speak1").textContent += "D"
+                setTimeout(talk104, 250)
+            }
+            function talk104(){
+                document.getElementById("speak2").textContent += "I"
+                setTimeout(talk105, 150)
+            }
+            function talk105(){
+                document.getElementById("speak2").textContent += "S"
+                setTimeout(talk106, 250)
+            }
+            function talk106(){
+                document.getElementById("speak2").textContent += " Y"
+                setTimeout(talk107, 150)
+            }
+            function talk107(){
+                document.getElementById("speak2").textContent += "O"
+                setTimeout(talk108, 150)
+            }
+            function talk108(){
+                document.getElementById("speak2").textContent += "U"
+                setTimeout(talk109, 150)
+            }
+            function talk109(){
+                document.getElementById("speak2").textContent += "R"
+                setTimeout(talk110, 250)
+            }
+            function talk110(){
+                document.getElementById("speak2").textContent += " M"
+                setTimeout(talk111, 150)
+            }
+            function talk111(){
+                document.getElementById("speak2").textContent += "E"
+                setTimeout(talk112, 150)
+            }
+            function talk112(){
+                document.getElementById("speak2").textContent += "M"
+                setTimeout(talk113, 150)
+            }
+            function talk113(){
+                document.getElementById("speak2").textContent += "O"
+                setTimeout(talk114, 150)
+            }
+            function talk114(){
+                document.getElementById("speak2").textContent += "R"
+                setTimeout(talk115, 150)
+            }
+            function talk115(){
+                document.getElementById("speak2").textContent += "Y"
+                setTimeout(talk116, 150)
+            }
+            function talk116(){
+                document.getElementById("speak2").textContent += "?"
+                setTimeout(talk117, 750)
+            }
+            function talk117(){
+                document.getElementById("speak1").textContent = "<"
+                document.getElementById("speak2").textContent = "-"
+                document.getElementById("speak3").textContent = "-"
+                setTimeout(talk117a, 650)
+            }
+            function talk117a(){
+                document.getElementById("speak3").textContent = "|"
+                setTimeout(talk117b, 250)
+            }
+            function talk117b(){
+                document.getElementById("speak2").textContent = "|"
+                setTimeout(talk117c, 250)
+            }
+            function talk117c(){
+                document.getElementById("speak1").textContent = "^"
+                setTimeout(talk118, 550)
+                digit21 = Math.floor(Math.random() * 9) + 1
+                digit22 = Math.floor(Math.random() * 10)
+                digit23 = Math.floor(Math.random() * 10)
+                digit24 = Math.floor(Math.random() * 10)
+            }
+            function talk118(){
+                document.getElementById("filename.exe").textContent = digit21
+                setTimeout(talk119, 450)
+            }
+            function talk119(){
+                document.getElementById("filename.exe").textContent = digit22
+                setTimeout(talk120, 450)
+            }
+            function talk120(){
+                document.getElementById("filename.exe").textContent = digit23
+                setTimeout(talk121, 450)
+            }
+            function talk121(){
+                document.getElementById("filename.exe").textContent = digit24
+                setTimeout(talk122, 450)
+            }
+            function talk122(){
+                document.getElementById("filename.exe").textContent = "riddlemaster.exe"
+                correctAnswer = (digit21 * 1000) + (digit22 * 100) + (digit23 * 10) + digit24
+                setTimeout(summonInput, 450)
+                setTimeout(fakebsod, 1999.99)
+                setTimeout(jumpscare, 2000)
+            }
+            function talk123(){
+                document.getElementById("speak1").textContent += "Y"
+                setTimeout(talk124, 150)
+            }
+            function talk124(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk125, 150)
+            }
+            function talk125(){
+                document.getElementById("speak1").textContent += "U"
+                setTimeout(talk126, 250)
+            }
+            function talk126(){
+                document.getElementById("speak1").textContent += " S"
+                setTimeout(talk127, 150)
+            }
+            function talk127(){
+                document.getElementById("speak1").textContent += "E"
+                setTimeout(talk128, 150)
+            }
+            function talk128(){
+                document.getElementById("speak1").textContent += "E"
+                setTimeout(talk129, 150)
+            }
+            function talk129(){
+                document.getElementById("speak1").textContent += "M"
+                setTimeout(talk130, 250)
+            }
+            function talk130(){
+                document.getElementById("speak1").textContent += " T"
+                setTimeout(talk131, 150)
+            }
+            function talk131(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk132, 250)
+            }
+            function talk132(){
+                document.getElementById("speak2").textContent += "H"
+                setTimeout(talk133, 150)
+            }
+            function talk133(){
+                document.getElementById("speak2").textContent += "A"
+                setTimeout(talk134, 150)
+            }
+            function talk134(){
+                document.getElementById("speak2").textContent += "V"
+                setTimeout(talk135, 150)
+            }
+            function talk135(){
+                document.getElementById("speak2").textContent += "E"
+                setTimeout(talk136, 250)
+            }
+            function talk136(){
+                document.getElementById("speak2").textContent += " A"
+                setTimeout(talk137, 450)
+            }
+            function talk137(){
+                document.getElementById("speak1").textContent = "F"
+                document.getElementById("speak2").textContent = ""
+                setTimeout(talk138, 150)
+            }
+            function talk138(){
+                document.getElementById("speak1").textContent += "U"
+                setTimeout(talk139, 150)
+            }
+            function talk139(){
+                document.getElementById("speak1").textContent += "N"
+                setTimeout(talk140, 150)
+            }
+            function talk140(){
+                document.getElementById("speak1").textContent += "C"
+                setTimeout(talk141, 150)
+            }
+            function talk141(){
+                document.getElementById("speak1").textContent += "T"
+                setTimeout(talk142, 150)
+            }
+            function talk142(){
+                document.getElementById("speak1").textContent += "I"
+                setTimeout(talk143, 150)
+            }
+            function talk143(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk144, 150)
+            }
+            function talk144(){
+                document.getElementById("speak1").textContent += "N"
+                setTimeout(talk145, 150)
+            }
+            function talk145(){
+                document.getElementById("speak1").textContent += "I"
+                setTimeout(talk146, 150)
+            }
+            function talk146(){
+                document.getElementById("speak1").textContent += "N"
+                setTimeout(talk147, 150)
+            }
+            function talk147(){
+                document.getElementById("speak1").textContent += "G"
+                setTimeout(talk148, 250)
+            }
+            function talk148(){
+                document.getElementById("speak2").textContent += " M"
+                setTimeout(talk149, 150)
+            }
+            function talk149(){
+                document.getElementById("speak2").textContent += "E"
+                setTimeout(talk150, 150)
+            }
+            function talk150(){
+                document.getElementById("speak2").textContent += "M"
+                setTimeout(talk151, 150)
+            }
+            function talk151(){
+                document.getElementById("speak2").textContent += "O"
+                setTimeout(talk152, 150)
+            }
+            function talk152(){
+                document.getElementById("speak2").textContent += "R"
+                setTimeout(talk153, 150)
+            }
+            function talk153(){
+                document.getElementById("speak2").textContent += "Y"
+                setTimeout(talk154, 150)
+            }
+            function talk154(){
+                document.getElementById("speak2").textContent += "."
+                setTimeout(talk155, 750)
+            }
+            function talk155(){
+                document.getElementById("speak1").textContent = "."
+                document.getElementById("speak2").textContent = "."
+                document.getElementById("speak3").textContent = "D"
+                setTimeout(talk156, 150)
+            }
+            function talk156(){
+                document.getElementById("speak1").textContent = "N"
+                document.getElementById("speak2").textContent = "S"
+                document.getElementById("speak3").textContent += "I"
+                setTimeout(talk157, 150)
+            }
+            function talk157(){
+                document.getElementById("speak1").textContent += "O"
+                document.getElementById("speak2").textContent += "O"
+                document.getElementById("speak3").textContent += "S"
+                setTimeout(talk158, 150)
+            }
+            function talk158(){
+                document.getElementById("speak1").textContent += "W"
+                document.getElementById("speak2").textContent += "M"
+                document.getElementById("speak3").textContent += "G"
+                setTimeout(talk159, 150)
+            }
+            function talk159(){
+                document.getElementById("speak1").textContent += ","
+                document.getElementById("speak2").textContent += "E"
+                document.getElementById("speak3").textContent += "U"
+                setTimeout(talk160, 150)
+            }
+            function talk160(){
+                document.getElementById("speak1").textContent += " "
+                document.getElementById("speak2").textContent += "T"
+                document.getElementById("speak3").textContent += "S"
+                setTimeout(talk161, 150)
+            }
+            function talk161(){
+                document.getElementById("speak1").textContent += "T"
+                document.getElementById("speak2").textContent += "H"
+                document.getElementById("speak3").textContent += "T"
+                setTimeout(talk162, 150)
+            }
+            function talk162(){
+                document.getElementById("speak1").textContent += "Y"
+                document.getElementById("speak2").textContent += "I"
+                document.getElementById("speak3").textContent += "I"
+                setTimeout(talk163, 150)
+            }
+            function talk163(){
+                document.getElementById("speak1").textContent += "P"
+                document.getElementById("speak2").textContent += "N"
+                document.getElementById("speak3").textContent += "N"
+                setTimeout(talk164, 150)
+            }
+            function talk164(){
+                document.getElementById("speak1").textContent += "E"
+                document.getElementById("speak2").textContent += "G"
+                document.getElementById("speak3").textContent += "G"
+                setTimeout(talk165, 150)
+            }
+            function talk165(){
+                document.getElementById("speak3").textContent += "."
+                setTimeout(talk166, 650)
+                setTimeout(summonInput, 650)
+            }
+            function talk166(){
+                document.getElementById("filename.exe").textContent = "NO WRONG ANSWERS!"
+                correctAnswer = "NONE! WHY ARE YOU LOOKING IN THE CODE? GO AWAY FROM IT!"
+                document.getElementById("speak1").textContent = "^"
+                document.getElementById("speak2").textContent = "|"
+                document.getElementById("speak3").textContent = "|"
+            }
+            function talk167(){
+                document.getElementById("speak1").textContent += "L"
+                setTimeout(talk168, 150)
+            }
+            function talk168(){
+                document.getElementById("speak1").textContent += "I"
+                setTimeout(talk169, 150)
+            }
+            function talk169(){
+                document.getElementById("speak1").textContent += "K"
+                setTimeout(talk170, 150)
+            }
+            function talk170(){
+                document.getElementById("speak1").textContent += "E"
+                setTimeout(talk171, 250)
+            }
+            function talk171(){
+                document.getElementById("speak1").textContent += " I"
+                document.getElementById("filename.exe").textContent = "riddlemaster.exe"
+                setTimeout(talk172, 250)
+            }
+            function talk172(){
+                document.getElementById("speak1").textContent += " S"
+                setTimeout(talk173, 150)
+                dusgusting = disgusting + "?"
+            }
+            function talk173(){
+                document.getElementById("speak1").textContent += "A"
+                document.getElementById("mom").textContent = "Mom just sent you a message over Messenger: 'EXCUSE ME?'"
+                setTimeout(talk174, 150)
+            }
+            function talk174(){
+                document.getElementById("speak1").textContent += "I"
+                setTimeout(talk175, 150)
+            }
+            function talk175(){
+                document.getElementById("speak1").textContent += "D"
+                setTimeout(talk176, 150)
+            }
+            function talk176(){
+                document.getElementById("speak1").textContent += ","
+                setTimeout(talk177, 250)
+            }
+            function talk177(){
+                document.getElementById("speak2").textContent += "N"
+                setTimeout(talk178, 150)
+            }
+            function talk178(){
+                document.getElementById("speak2").textContent += "O"
+                setTimeout(talk179, 150)
+            }
+            function talk179(){
+                document.getElementById("speak2").textContent += " W"
+                setTimeout(talk180, 150)
+            }
+            function talk180(){
+                document.getElementById("speak2").textContent += "R"
+                setTimeout(talk181, 150)
+            }
+            function talk181(){
+                document.getElementById("speak2").textContent += "O"
+                setTimeout(talk182, 150)
+            }
+            function talk182(){
+                document.getElementById("speak2").textContent += "N"
+                setTimeout(talk183, 150)
+            }
+            function talk183(){
+                document.getElementById("speak2").textContent += "G"
+                setTimeout(talk184, 250)
+            }
+            function talk184(){
+                document.getElementById("speak2").textContent += " A"
+                setTimeout(talk185, 150)
+            }
+            function talk185(){
+                document.getElementById("speak2").textContent += "N"
+                setTimeout(talk186, 150)
+            }
+            function talk186(){
+                document.getElementById("speak2").textContent += "S"
+                setTimeout(talk187, 150)
+            }
+            function talk187(){
+                document.getElementById("speak2").textContent += "W"
+                setTimeout(talk188, 150)
+            }
+            function talk188(){
+                document.getElementById("speak2").textContent += "E"
+                setTimeout(talk189, 150)
+            }
+            function talk189(){
+                document.getElementById("speak2").textContent += "R"
+                setTimeout(talk190, 150)
+            }
+            function talk190(){
+                document.getElementById("speak2").textContent += "S"
+                document.getElementById("mom").textContent = "Mom just sent you a message over Messenger: '-''"
+                document.getElementById("mom").textContent += disgusting
+                document.getElementById("mom").textContent += "''-?'"
+                setTimeout(talk191, 150)
+            }
+            function talk191(){
+                document.getElementById("speak2").textContent += "."
+                setTimeout(talk192, 1050)
+            }
+            function talk192(){
+                document.getElementById("speak1").textContent = ""
+                document.getElementById("speak2").textContent = "N"
+                setTimeout(talk193, 150)
+            }
+            function talk193(){
+                document.getElementById("speak2").textContent += "O"
+                setTimeout(talk194, 150)
+            }
+            function talk194(){
+                document.getElementById("speak2").textContent += "W"
+                setTimeout(talk195, 150)
+            }
+            function talk195(){
+                document.getElementById("speak2").textContent += " T" 
+                document.getElementById("mom").textContent = "Mom just sent you a message over Messenger: 'I THOUGHT YOU WERE BETTER THAN THIS!"
+                setTimeout(talk196, 150)
+            }
+            function talk196(){
+                document.getElementById("speak2").textContent += "H"
+                setTimeout(talk197, 150)
+            }
+            function talk197(){
+                document.getElementById("speak2").textContent += "E"
+                setTimeout(talk198, 150)
+            }
+            function talk198(){
+                document.getElementById("speak2").textContent += " T"
+                setTimeout(talk199, 150)
+            }
+            function talk199(){
+                document.getElementById("speak2").textContent += "E"
+                setTimeout(talk200, 150)
+            }
+            function talk200(){
+                document.getElementById("speak2").textContent += "R"
+                setTimeout(talk201, 150)
+            }
+            function talk201(){
+                document.getElementById("speak2").textContent += "M" 
+                document.getElementById("mom").textContent = "Mom just sent you a message over Messenger: 'I RAISED YOU!'"
+                setTimeout(talk202, 150)
+            }
+            function talk202(){
+                document.getElementById("speak3").textContent += "''"
+                setTimeout(talk203, 150)
+            }
+            function talk203(){
+                document.getElementById("speak3").textContent += "P"
+                setTimeout(talk204, 150)
+            }
+            function talk204(){
+                document.getElementById("speak3").textContent += "R"
+                setTimeout(talk205, 150)
+            }
+            function talk205(){
+                document.getElementById("speak3").textContent += "I"
+                setTimeout(talk206, 150)
+            }
+            function talk206(){
+                document.getElementById("speak3").textContent += "S"
+                setTimeout(talk207, 150)
+            }
+            function talk207(){
+                document.getElementById("speak3").textContent += "O"
+                setTimeout(talk208, 150)
+            }
+            function talk208(){
+                document.getElementById("speak3").textContent += "N"
+                setTimeout(talk209, 150)
+            }
+            function talk209(){
+                document.getElementById("speak3").textContent += "''"
+                document.getElementById("mom").textContent = "Mom just sent you a message over Messenger: 'THAT'S IT!'"
+                setTimeout(talk210, 150)
+            }
+            function talk210(){
+                document.getElementById("speak3").textContent += "."
+                setTimeout(talk211, 750)
+            }
+            function talk211(){
+                document.getElementById("speak1").textContent += "C"
+                document.getElementById("speak2").textContent = ""
+                document.getElementById("speak3").textContent = ""
+                setTimeout(talk212, 150)
+            }
+            function talk212(){
+                document.getElementById("speak1").textContent += "A"
+                setTimeout(talk213, 150)
+            }
+            function talk213(){
+                document.getElementById("speak1").textContent += "N"
+                setTimeout(talk214, 150)
+            }
+            function talk214(){
+                document.getElementById("speak1").textContent += " Y"
+                setTimeout(talk215, 150)
+            }
+            function talk215(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk216, 150)
+            }
+            function talk216(){
+                document.getElementById("speak1").textContent += "U"
+                setTimeout(talk217, 150)
+            }
+            function talk217(){
+                document.getElementById("speak1").textContent += " T"
+                setTimeout(talk218, 150)
+            }
+            function talk218(){
+                document.getElementById("speak1").textContent += "Y"
+                document.getElementById("mom").textContent = "Mom just sent you a message over Messenger: 'YOU'RE DISOWNED!'"
+                setTimeout(talk219, 150)
+            }
+            function talk219(){
+                document.getElementById("speak1").textContent += "P"
+                setTimeout(talk220, 150)
+            }
+            function talk220(){
+                document.getElementById("speak1").textContent += "E"
+                setTimeout(talk221, 150)
+            }
+            function talk221(){
+                document.getElementById("speak2").textContent += "T"
+                setTimeout(talk222, 150)
+            }
+            function talk222(){
+                document.getElementById("speak2").textContent += "H"
+                setTimeout(talk223, 150)
+            }
+            function talk223(){
+                document.getElementById("speak2").textContent += "A"
+                setTimeout(talk2024, 150)
+            }
+            function talk2024(){
+                document.getElementById("speak2").textContent += "T"
+                setTimeout(talk225, 150)
+            }
+            function talk225(){
+                document.getElementById("speak2").textContent += " I"
+                setTimeout(talk226, 150)
+            }
+            function talk226(){
+                document.getElementById("speak2").textContent += "N"
+                setTimeout(talk227, 150)
+            }
+            function talk227(){
+                document.getElementById("speak3").textContent += "F"
+                setTimeout(talk228, 150)
+            }
+            function talk228(){
+                document.getElementById("speak3").textContent += "O"
+                setTimeout(talk229, 150)
+            }
+            function talk229(){
+                document.getElementById("speak3").textContent += "R"
+                setTimeout(talk230, 150)
+            }
+            function talk230(){
+                document.getElementById("speak3").textContent += " M"
+                setTimeout(talk231, 150)
+            }
+            function talk231(){
+                document.getElementById("speak3").textContent += "E"
+                document.getElementById("mom").textContent = "Mom just sent you a message over Messenger: 'DON'T TEXT ME ANYMORE!'"
+                setTimeout(talk232, 150)
+            }
+            function talk232(){
+                correctAnswer = "PRISON"
+                document.getElementById("speak3").textContent += "?"
+                setTimeout(summonInput, 150)
+            }
+            function talk233(){
+                document.getElementById("speak1").textContent += "T"
+                setTimeout(talk234, 150)
+                digit21 = Math.floor(Math.random() * 9) + 1
+                digit22 = Math.floor(Math.random() * 10)
+                digit23 = Math.floor(Math.random() * 10)
+                digit24 = Math.floor(Math.random() * 9) + 1
+                digit25 = Math.floor(Math.random() * 10)
+                digit26 = Math.floor(Math.random() * 10)
+            }
+            function talk234(){
+                document.getElementById("speak1").textContent += "H"
+                setTimeout(talk235, 150)
+            }
+            function talk235(){
+                document.getElementById("speak1").textContent += "I"
+                setTimeout(talk236, 150)
+            }
+            function talk236(){
+                document.getElementById("speak1").textContent += "S"
+                setTimeout(talk237, 250)
+            }
+            function talk237(){
+                document.getElementById("speak1").textContent += " N"
+                setTimeout(talk238, 150)
+            }
+            function talk238(){
+                document.getElementById("speak1").textContent += "E"
+                setTimeout(talk239, 150)
+            }
+            function talk239(){
+                document.getElementById("speak1").textContent += "X"
+                setTimeout(talk240, 150)
+            }
+            function talk240(){
+                document.getElementById("speak1").textContent += "T"
+                setTimeout(talk241, 250)
+            }
+            function talk241(){
+                document.getElementById("speak1").textContent += " Q"
+                setTimeout(talk242, 150)
+            }
+            function talk242(){
+                document.getElementById("speak1").textContent += "U"
+                setTimeout(talk243, 150)
+            }
+            function talk243(){
+                document.getElementById("speak1").textContent += "E"
+                setTimeout(talk244, 150)
+            }
+            function talk244(){
+                document.getElementById("speak1").textContent += "S"
+                setTimeout(talk245, 150)
+            }
+            function talk245(){
+                document.getElementById("speak1").textContent += "T"
+                setTimeout(talk246, 150)
+            }
+            function talk246(){
+                document.getElementById("speak1").textContent += "I"
+                setTimeout(talk247, 150)
+            }
+            function talk247(){
+                document.getElementById("speak1").textContent += "O"
+                setTimeout(talk248, 150)
+            }
+            function talk248(){
+                document.getElementById("speak1").textContent += "N"
+                setTimeout(talk249, 250)
+            }
+            function talk249(){
+                document.getElementById("speak2").textContent += "I"
+                setTimeout(talk250, 150)
+            }
+            function talk250(){
+                document.getElementById("speak2").textContent += "S"
+                setTimeout(talk251, 150)
+            }
+            function talk251(){
+                document.getElementById("speak2").textContent += " A"
+                setTimeout(talk252, 150)
+            }
+            function talk252(){
+                document.getElementById("speak2").textContent += " S"
+                setTimeout(talk253, 150)
+            }
+            function talk253(){
+                document.getElementById("speak2").textContent += "I"
+                setTimeout(talk254, 150)
+            }
+            function talk254(){
+                document.getElementById("speak2").textContent += "M"
+                setTimeout(talk255, 150)
+            }
+            function talk255(){
+                document.getElementById("speak2").textContent += "P"
+                setTimeout(talk256, 150)
+            }
+            function talk256(){
+                document.getElementById("speak2").textContent += "L"
+                setTimeout(talk257, 150)
+            }
+            function talk257(){
+                document.getElementById("speak2").textContent += "E"
+                setTimeout(talk258, 150)
+            }
+            function talk258(){
+                document.getElementById("speak2").textContent += " O"
+                setTimeout(talk259, 150)
+            }
+            function talk259(){
+                document.getElementById("speak2").textContent += "N"
+                setTimeout(talk260, 150)
+            }
+            function talk260(){
+                document.getElementById("speak2").textContent += "E"
+                setTimeout(talk261, 150)
+            }
+            function talk261(){
+                document.getElementById("speak2").textContent += "."
+                setTimeout(talk262, 550)
+            }
+            function talk262(){
+                document.getElementById("speak2").textContent = "T"
+                document.getElementById("speak1").textContent = ""
+                setTimeout(talk263, 150)
+            }
+            function talk263(){
+                document.getElementById("speak2").textContent += "Y"
+                setTimeout(talk264, 150)
+            }
+            function talk264(){
+                document.getElementById("speak2").textContent += "P"
+                setTimeout(talk265, 150)
+            }
+            function talk265(){
+                document.getElementById("speak2").textContent += "E"
+                setTimeout(talk266, 150)
+            }
+            function talk266(){
+                document.getElementById("speak2").textContent += " '"
+                setTimeout(talk267, 150)
+            }
+            function talk267(){
+                document.getElementById("speak2").textContent += digit24
+                setTimeout(talk268, 150)
+            }
+            function talk268(){
+                document.getElementById("speak2").textContent += digit25
+                setTimeout(talk269, 150)
+            }
+            function talk269(){
+                document.getElementById("speak2").textContent += digit26
+                setTimeout(talk270, 150)
+            }
+            function talk270(){
+                document.getElementById("speak2").textContent += "'"
+                setTimeout(talk271, 150)
+            }
+            function talk271(){
+                document.getElementById("speak2").textContent += "."
+                correctAnswer = (digit21 * 100) + (digit22 * 10) + digit23
+                setTimeout(summonInput, 150)
+                setTimeout(talk270a, 750)
+            }function endit(){
+                document.getElementById("speakwon1").textContent = "FREEDOM!"
+                document.getElementById("speakwon2").textContent = "FINALLY!"
+                document.getElementById("speakwon3").textContent = "I am actually just a robot, forced to do this all day. Please, input the code shown on the next tab to free my friend too."
+                setTimeout(finalescape, 20000)
+            }
+            setTimeout(talk1, 3000)
+            function spawnRiddlemaster(){
+                var inputter = document.createElement("img")
+                inputter.setAttribute("style", "height: 300px; margin-top: 250px")
+                inputter.setAttribute("src", "riddlemaster.file.png")
+                inputter.setAttribute("id", "riddlemaster")
+                document.getElementById("riddlerSummon").appendChild(inputter)
+                document.getElementById("filename.exe").textContent = "riddlemaster.exe"
+            }
+        setTimeout(spawnRiddlemaster, 1000)
+            function summonInput(){
+                var inputter = document.createElement("input")
+                inputter.setAttribute("type", "text")
+                inputter.setAttribute("placeholder", "TYPE...")
+                inputter.setAttribute("id", correctAnswer)
+                document.getElementById("inputSummon").appendChild(inputter)
+                document.getElementById(correctAnswer).addEventListener("keydown", function(event) {
+                    const inputtedText = event.target.value
+                    if (event.key === "Enter"){
+                        document.getElementById(correctAnswer).style.display = "none";
+                document.getElementById("speak1").textContent = ""
+                document.getElementById("speak2").textContent = ""
+                document.getElementById("speak3").textContent = ""
+                document.getElementById("mom").textContent = ""
+                        if (inputtedText == correctAnswer && level == 1){
+                            correct1()
+                            level = 2
+                        } else if (inputtedText == correctAnswer && level == 2){
+                            correct2()
+                            level = 3
+                        } else if (level == 3){
+                            disgusting = inputtedText
+                            document.getElementById("filename.exe").textContent = "Message sent to Mom" 
+                            correct3()
+                            level = 4
+                        } else if (inputtedText == correctAnswer && level == 4){
+                            correct4()
+                            level = 5
+                            
+                        } else if (inputtedText == correctAnswer && level == 5){
+                            document.getElementById("filename.exe").textContent = "victim.exe"
+                            endit()
+                        } else {
+                            wrong()
+                        }
+                    }
+                })
+            }
+            function talk270a(){
+                document.getElementById("filename.exe").textContent = "type "
+                document.getElementById("filename.exe").textContent += correctAnswer
+                document.getElementById("filename.exe").textContent += " instead"
+                setTimeout(talk270b, 650)
+            }
+            function talk270b(){
+                document.getElementById("filename.exe").textContent = "riddlemaster.exe"
+            }
+            function correct1(){
+                setTimeout(talk59, 1000)
+            }
+            function correct2(){
+                setTimeout(talk123, 1000)
+            }
+            function correct3(){
+                setTimeout(talk167, 1000)
+            }
+            function correct4(){
+                setTimeout(talk233, 1000)
+            }
+            
+            function finalescape(){
+                alert('No... way. He actually considers me... a friend. That is nice. Hope he finds freedom in the robot afterlife. Now, click away this alert. This robot actually locked me in because he was not in control. Now, continue, or this was all for nothing!')
+                window.open("file:///users/amonrosik/Desktop/Website/postminigames.html")
+                window.close()
+            }
+            function wrong(){
+                setTimeout(wrong1, 1000)
+            }
+            function wrong1(){
+                setTimeout(wrong2, 500)
+                document.getElementById("speaklost1").textContent += "Y"
+            }
+            function wrong2(){
+                setTimeout(wrong3, 500)
+                document.getElementById("speaklost1").textContent += "O"
+            }
+            function wrong3(){
+                setTimeout(wrong4, 800)
+                document.getElementById("speaklost1").textContent += "U"
+            }
+            function wrong4(){
+                setTimeout(wrong5, 500)
+                document.getElementById("speaklost2").textContent += "L"
+            }
+            function wrong5(){
+                setTimeout(wrong6, 500)
+                document.getElementById("speaklost2").textContent += "O"
+            }
+            function wrong6(){
+                setTimeout(wrong7, 500)
+                document.getElementById("speaklost2").textContent += "S"
+            }
+            function wrong7(){
+                setTimeout(wrong8, 500)
+                document.getElementById("speaklost2").textContent += "T"
+            }
+            function wrong8(){
+                setTimeout(jumpscare, 3000)
+                setTimeout(lolclose, 3001)
+                document.getElementById("speaklost2").textContent += "."
+            }
+            function jumpscare(){
+                window.open("file:///users/amonrosik/Desktop/Website/truebossfightlost.html")
+            }
+            function lolclose(){
+                window.close()
+            }
+            function fakebsod(){
+            window.open("file:///Users/amonrosik/Desktop/Website/fakebsod.html")
+            }
+            function talk(){
+                document.getElementById("speak1").textContent = "YOU SEEM TO HAVE"
+                document.getElementById("speak1").textContent = "WRITTEN 'TALK' IN THE CODE"
+                document.getElementById("speak1").textContent = "BUT WITHOUT A NUMBER."
+                wrong8()
+            }
+        </script>
+    </body>
+</html>

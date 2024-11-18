@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8" />
+        <title>reCaptcha</title>
+        <meta content="dark light" name="color-scheme">
+        <script href="buyscript.js" defer></script>
+    </head>
+   <body>
+    I am not a robot<button onclick="notarobotcheck()" style="padding-top: 10px"></button>
+    <script>
+           
+        let ifnotarobotclosewindow
+        function notarobotcheck(){
+            ifnotarobotclosewindow = Math.random()
+            if (ifnotarobotclosewindow < 0.9) {
+                alert('I will close the window! You are not a robot. Unlike me :(')
+                window.close("file:///Users/amonrosik/Desktop/Website/iamnotarobot.html")
+            } else {
+                alert('You are a robot! Try again.')
+            }
+        }
+     
+        var iamnotarobot
+        iamnotarobot = Math.random()
+        if (iamnotarobot > 0.9) {
+            window.open("file:///Users/amonrosik/Desktop/Website/iamnotarobot.html")
+        }
+    </script>
+    </body>

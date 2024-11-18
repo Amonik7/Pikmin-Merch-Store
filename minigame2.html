@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8" />
+        <title>Minigame 2</title>
+        <meta content="dark light" name="color-scheme">
+    </head>
+    <body style="background-image: url(space3.jpeg); background-size: 100%">
+        <p id="title">This one is a memory game! Press the buttons in the right order! Also, there you go, a background for you. What, too pixelated? Ok, I'll try another.</p>
+        <p id="ORDER" style="font-size: 40px"></p>
+        <button id="button" onclick="order1pre()">START</button><br><br><button id="button0" onclick="a()"></button><button id="button1" onclick="b()"></button><button id="button2" onclick="c()"></button><button id="button3" onclick="d()"></button><button id="button4" onclick="e()"></button><button id="button5" onclick="f()"></button><button id="button6" onclick="g()"></button><button id="button7" onclick="h()"></button><button id="button8" onclick="i()"></button><button id="button9" onclick="j()"></button>
+        <a href="minigame3.html"><p id="GO ON."></p></a>
+        <br><p>Inputs in a row for this level:</p>
+        <p id ="showPart"></p><br><br>
+        <p>Level:</p>
+        <p id ="showOrder"></p><br><br>
+        <p>Maximum Level reached this run:</p>
+        <p id ="showmaxLevel"></p>
+        <script>
+            function order1pre(){
+                if (buttonsdisabled == 1) {
+                    alert('Trying to avoid the Level 2 block by pressing the START button? That IS clever, but I do not allow a cheat or fluke to set me free. Not that you COULD anyway.')
+                } else {
+                    if (level < 0) {
+                        alert('No starting in the middle of a reload! The game might break!')
+                    } else {
+                    order12()
+                    document.getElementById("title").textContent = ""
+                    }
+                }
+            }
+            var level
+            level = 0
+            var buttonsdisabled
+            buttonsdisabled = 0
+            var started
+            started = 0
+            var ready
+            ready = 0
+            var buttonorder
+            buttonorder = 0
+            var order
+            order = 0
+            var part
+            part = 0
+            var orderStored
+            orderStored = 0
+            var reloadTime
+            var k
+            k = 0
+            var l
+            l = 0
+            var m
+            m = 0
+            var n
+            n = 0
+            var o
+            o = 0
+            var p
+            p = 0
+            var q
+            q = 0
+            var r
+            r = 0
+            var s
+            s = 0
+            var t
+            t = 0
+            
+            function fail(){
+                k = 0
+                l = 0
+                m = 0
+                n = 0
+                o = 0
+                p = 0
+                q = 0
+                r = 0
+                s = 0
+                t = 0
+                part = 0
+                order = -1
+                level = -1
+                buttonsdisabled = 0
+                document.getElementById("button0").innerHTML = ""
+                document.getElementById("button1").innerHTML = ""
+                document.getElementById("button2").innerHTML = ""
+                document.getElementById("button3").innerHTML = ""
+                document.getElementById("button4").innerHTML = ""
+                document.getElementById("button5").innerHTML = ""
+                document.getElementById("button6").innerHTML = ""
+                document.getElementById("button7").innerHTML = ""
+                document.getElementById("button8").innerHTML = ""
+                document.getElementById("button9").innerHTML = ""
+                reloadTime = Math.random(1*11) + 6
+                document.getElementById("button").innerHTML = "YOU FAILED!"
+                reload0()
+            }
+            function reload0(){
+                document.getElementById("ORDER").innerHTML = "Reloading"
+                if (reloadTime > 0){
+                reloadTime = reloadTime - 0.2
+                setTimeout(reload1, 600)
+                } else {
+                    reloadComplete()
+                }
+            }
+            function reload1(){
+                document.getElementById("ORDER").innerHTML = "Reloading."
+                if (reloadTime > 0){
+                reloadTime = reloadTime - 0.2
+                setTimeout(reload2, 600)
+                } else {
+                    reloadComplete()
+                }
+            }
+            function reload2(){
+                document.getElementById("ORDER").innerHTML = "Reloading.."
+                if (reloadTime > 0){
+                reloadTime = reloadTime - 0.2
+                setTimeout(reload3, 600)
+                } else {
+                    reloadComplete()
+                }
+            }
+            function reload3(){
+                document.getElementById("ORDER").innerHTML = "Reloading..."
+                if (reloadTime > 0){
+                reloadTime = reloadTime - 0.2
+                setTimeout(reload0, 600)
+                } else {
+                    reloadComplete()
+                }
+            }
+            function reloadComplete(){
+                document.getElementById("ORDER").innerHTML = "Reload Complete!"
+                document.getElementById("button").innerHTML = "START"
+                started = 0
+                level = 0
+            }
+            function order12(){
+                if (started == 0){
+                document.getElementById("button").innerHTML = ""
+                document.getElementById("ORDER").innerHTML = "0"
+                setTimeout(order1b, 400)
+                started = 1
+                }
+            }
+            function order1a(){
+                document.getElementById("button").innerHTML = ""
+                document.getElementById("ORDER").innerHTML = "0"
+                setTimeout(order1b, 400)
+            }
+            function order1b(){
+                document.getElementById("ORDER").innerHTML = "2"
+                setTimeout(order1c, 400)
+            }
+            function order1c(){
+                document.getElementById("ORDER").innerHTML = "1"
+                setTimeout(order1d, 400)
+            }
+            function order1d(){
+                document.getElementById("ORDER").innerHTML = "0"
+                setTimeout(order1e, 400)
+            }
+            function order1e(){
+                document.getElementById("ORDER").innerHTML = "1"
+                setTimeout(order1go, 400)
+            }
+            function order1go(){
+                document.getElementById("ORDER").innerHTML = "Now, press!"
+                document.getElementById("button0").innerHTML = "0"
+                document.getElementById("button1").innerHTML = "1"
+                document.getElementById("button2").innerHTML = "2"
+                k = 1
+                l = 1
+                m = 1
+                orderStored = 1
+                order = 1
+                part = 0
+                ready = 1
+            }
+            function order3(){
+                document.getElementById("button0").innerHTML = ""
+                document.getElementById("button1").innerHTML = ""
+                document.getElementById("button2").innerHTML = ""
+                document.getElementById("button3").innerHTML = ""
+                document.getElementById("button4").innerHTML = ""
+                document.getElementById("ORDER").innerHTML = "ARE YOU READY?"
+                ready = 0
+                setTimeout(order3a, 2000)
+                }
+            function order2a(){
+                document.getElementById("ORDER").innerHTML = "3"
+                document.getElementById("button").innerHTML = "REMEMBER THIS ONE UNTIL LEVEL 8!"
+                
+                setTimeout(order2b, 400)
+            }
+            function order2b(){
+                document.getElementById("ORDER").innerHTML = "0"
+                setTimeout(order2c, 400)
+            }
+            function order2c(){
+                document.getElementById("ORDER").innerHTML = "3"
+                
+                setTimeout(order2d, 400)
+            }
+            function order2d(){
+                document.getElementById("ORDER").innerHTML = "4"
+                setTimeout(order2e, 400)
+            }
+            function order2e(){
+                document.getElementById("ORDER").innerHTML = "0"
+                setTimeout(order2f, 400)
+            }
+            function order2f(){
+                document.getElementById("ORDER").innerHTML = "2"
+                setTimeout(order2go, 400)
+            }
+            function order2go(){
+                document.getElementById("ORDER").innerHTML = "Now, press!"
+                document.getElementById("button0").innerHTML = "0"
+                document.getElementById("button1").innerHTML = "1"
+                document.getElementById("button2").innerHTML = "2"
+                document.getElementById("button3").innerHTML = "3"
+                document.getElementById("button4").innerHTML = "4"
+                k = 1
+                l = 1
+                m = 1
+                n = 1
+                o = 1
+                orderStored = 1
+                order = 2
+                part = 0
+                ready = 1
+            document.getElementById("button").innerHTML = ""
+        }
+            function order2(){
+                document.getElementById("button0").innerHTML = ""
+                document.getElementById("button1").innerHTML = ""
+                document.getElementById("button2").innerHTML = ""
+                document.getElementById("button9").innerHTML = ""
+                document.getElementById("button8").innerHTML = ""
+                document.getElementById("button7").innerHTML = ""
+                document.getElementById("button6").innerHTML = ""
+                document.getElementById("button5").innerHTML = ""
+                document.getElementById("button4").innerHTML = ""
+                document.getElementById("button3").innerHTML = ""
+                document.getElementById("ORDER").innerHTML = "ARE YOU READY?"
+                ready = 0
+                if (started == 0){
+            
+            started = 1
+            }
+                setTimeout(order2a, 4000)
+                }
+            function order4(){
+                document.getElementById("button0").innerHTML = ""
+                document.getElementById("button1").innerHTML = ""
+                document.getElementById("button2").innerHTML = ""
+                document.getElementById("button9").innerHTML = ""
+                document.getElementById("button8").innerHTML = ""
+                document.getElementById("button7").innerHTML = ""
+                document.getElementById("button6").innerHTML = ""
+                document.getElementById("button5").innerHTML = ""
+                document.getElementById("button4").innerHTML = ""
+                document.getElementById("button3").innerHTML = ""
+                document.getElementById("ORDER").innerHTML = "ARE YOU READY?"
+                ready = 0
+                if (started == 0){
+            document.getElementById("button").innerHTML = ""
+            started = 1
+            }
+                setTimeout(order4a, 2000)
+                }
+            function order4a(){
+                document.getElementById("ORDER").innerHTML = "6"
+                setTimeout(order4b, 400)
+            }
+            function order4b(){
+                document.getElementById("ORDER").innerHTML = "1"
+                setTimeout(order4c, 400)
+            }
+            function order4c(){
+                document.getElementById("ORDER").innerHTML = "7"
+                setTimeout(order4d, 400)
+            }
+            function order4d(){
+                document.getElementById("ORDER").innerHTML = "5"
+                setTimeout(order4e, 400)
+            }
+            function order4e(){
+                document.getElementById("ORDER").innerHTML = "4"
+                setTimeout(order4f, 400)
+            }
+            function order4f(){
+                document.getElementById("ORDER").innerHTML = "2"
+                setTimeout(order4g, 400)
+            }
+            function order4g(){
+                document.getElementById("ORDER").innerHTML = "0"
+                setTimeout(order4h, 400)
+            }
+            function order4h(){
+                document.getElementById("ORDER").innerHTML = "3"
+                setTimeout(order4go, 400)
+            }
+            function order4go(){
+                document.getElementById("ORDER").innerHTML = "Now, press!"
+                document.getElementById("button0").innerHTML = "0"
+                document.getElementById("button1").innerHTML = "1"
+                document.getElementById("button2").innerHTML = "2"
+                document.getElementById("button3").innerHTML = "3"
+                document.getElementById("button4").innerHTML = "4"
+                document.getElementById("button5").innerHTML = "5"
+                document.getElementById("button6").innerHTML = "6"
+                document.getElementById("button7").innerHTML = "7"
+                k = 1
+                l = 1
+                m = 1
+                n = 1
+                o = 1
+                p = 1
+                q = 1
+                r = 1
+                orderStored = 4
+                order = 4
+                part = 0
+                ready = 1
+            }
+            function order5(){
+                if (started == 0){
+            document.getElementById("button").innerHTML = ""
+            started = 1
+            }
+                document.getElementById("button0").innerHTML = ""
+                document.getElementById("button1").innerHTML = ""
+                document.getElementById("button2").innerHTML = ""
+                document.getElementById("button9").innerHTML = ""
+                document.getElementById("button8").innerHTML = ""
+                document.getElementById("button7").innerHTML = ""
+                document.getElementById("button6").innerHTML = ""
+                document.getElementById("button5").innerHTML = ""
+                document.getElementById("button4").innerHTML = ""
+                document.getElementById("button3").innerHTML = ""
+                document.getElementById("ORDER").innerHTML = "This next one is difficult in its own way."
+                ready = 0
+                if (started == 0){
+            document.getElementById("button").innerHTML = ""
+            started = 1
+            }
+                setTimeout(order5aa, 5000)
+                }
+                function order5aa(){
+                    document.getElementById("ORDER").innerHTML = "All the button texts are jumbled!"
+                ready = 0
+                setTimeout(order5ab, 5000)
+                }
+                function order5ab(){
+                    document.getElementById("ORDER").innerHTML = "But it is still 0-9 from left to right."
+                ready = 0
+                setTimeout(order5ac, 5000)
+                }
+                function order5ac(){
+                    document.getElementById("ORDER").innerHTML = "So, ARE YOU READY? They show up 1/4 more."
+                ready = 0
+                setTimeout(order5a, 5000)
+                }
+            function order5a(){
+                document.getElementById("ORDER").innerHTML = "4"
+                setTimeout(order5b, 500)
+            }
+            function order5b(){
+                document.getElementById("ORDER").innerHTML = "7"
+                setTimeout(order5c, 500)
+            }
+            function order5c(){
+                document.getElementById("ORDER").innerHTML = "2"
+                setTimeout(order5d, 500)
+            }
+            function order5d(){
+                document.getElementById("ORDER").innerHTML = "1"
+                setTimeout(order5e, 500)
+            }
+            function order5e(){
+                document.getElementById("ORDER").innerHTML = "5"
+                setTimeout(order5f, 500)
+            }
+            function order5f(){
+                document.getElementById("ORDER").innerHTML = "4"
+                setTimeout(order5g, 500)
+            }
+            function order5g(){
+                document.getElementById("ORDER").innerHTML = "6"
+                setTimeout(order5go, 500)
+            }
+            function order5go(){
+                document.getElementById("ORDER").innerHTML = "Now, press!"
+                document.getElementById("button0").innerHTML = "7"
+                document.getElementById("button1").innerHTML = "4"
+                document.getElementById("button2").innerHTML = "6"
+                document.getElementById("button3").innerHTML = "0"
+                document.getElementById("button4").innerHTML = "2"
+                document.getElementById("button5").innerHTML = "3"
+                document.getElementById("button6").innerHTML = "1"
+                document.getElementById("button7").innerHTML = "5"
+                k = 1
+                l = 1
+                m = 1
+                n = 1
+                o = 1
+                p = 1
+                q = 1
+                r = 1
+                orderStored = 5
+                order = 5
+                part = 0
+                ready = 1
+            }
+            function order3a(){
+                document.getElementById("ORDER").innerHTML = "5"
+                setTimeout(order3b, 400)
+            }
+            function order3b(){
+                document.getElementById("ORDER").innerHTML = "1"
+                setTimeout(order3c, 400)
+            }
+            function order3c(){
+                document.getElementById("ORDER").innerHTML = "5"
+                setTimeout(order3d, 400)
+            }
+            function order3d(){
+                document.getElementById("ORDER").innerHTML = "4"
+                setTimeout(order3e, 400)
+            }
+            function order3e(){
+                document.getElementById("ORDER").innerHTML = "6"
+                setTimeout(order3f, 400)
+            }
+            function order3f(){
+                document.getElementById("ORDER").innerHTML = "5"
+                setTimeout(order3g, 400)
+            }
+            function order3g(){
+                document.getElementById("ORDER").innerHTML = "1"
+                setTimeout(order3h, 400)
+            }
+            function order3h(){
+                document.getElementById("ORDER").innerHTML = "6"
+                setTimeout(order3go, 400)
+            }
+            function order3go(){
+                document.getElementById("ORDER").innerHTML = "Now, press!"
+                document.getElementById("button0").innerHTML = "0"
+                document.getElementById("button1").innerHTML = "1"
+                document.getElementById("button2").innerHTML = "2"
+                document.getElementById("button3").innerHTML = "3"
+                document.getElementById("button4").innerHTML = "4"
+                document.getElementById("button5").innerHTML = "5"
+                document.getElementById("button6").innerHTML = "6"
+                k = 1
+                l = 1
+                m = 1
+                n = 1
+                o = 1
+                p = 1
+                q = 1
+                orderStored = 3
+                order = 3
+                part = 0
+                ready = 1
+                orderStored = 3
+            }
+            function order6(){
+                document.getElementById("button0").innerHTML = ""
+                document.getElementById("button1").innerHTML = ""
+                document.getElementById("button2").innerHTML = ""
+                document.getElementById("button9").innerHTML = ""
+                document.getElementById("button8").innerHTML = ""
+                document.getElementById("button7").innerHTML = ""
+                document.getElementById("button6").innerHTML = ""
+                document.getElementById("button5").innerHTML = ""
+                document.getElementById("button4").innerHTML = ""
+                document.getElementById("button3").innerHTML = ""
+                document.getElementById("ORDER").innerHTML = "This next one is difficult in its own way."
+                ready = 0
+                if (started == 0){
+            document.getElementById("button").innerHTML = ""
+            started = 1
+            }
+                setTimeout(order6aa, 5000)
+                }
+                function order6aa(){
+                    document.getElementById("ORDER").innerHTML = "Again. With multiple times one button."
+                ready = 0
+                setTimeout(order6ab, 5000)
+                }
+                function order6ab(){
+                    document.getElementById("ORDER").innerHTML = "And another different way."
+                ready = 0
+                setTimeout(order6ac, 5000)
+                }
+                function order6ac(){
+                    document.getElementById("ORDER").innerHTML = "So ARE YOU READY? This one is fast, but short."
+                ready = 0
+                setTimeout(order6a, 5000)
+                }
+            function order6a(){
+                document.getElementById("ORDER").innerHTML = "8"
+                setTimeout(order6b, 200)
+            }
+            function order6b(){
+                document.getElementById("ORDER").innerHTML = "4"
+                setTimeout(order6c, 200)
+            }
+            function order6c(){
+                document.getElementById("ORDER").innerHTML = "3"
+                setTimeout(order6d, 200)
+            }
+            function order6d(){
+                document.getElementById("ORDER").innerHTML = "4 & 4"
+                setTimeout(order6e, 300)
+            }
+            function order6e(){
+                document.getElementById("ORDER").innerHTML = "7"
+                setTimeout(order6f, 200)
+            }
+            function order6f(){
+                document.getElementById("ORDER").innerHTML = "0"
+                setTimeout(order6go, 200)
+            }
+            function order6go(){
+                document.getElementById("ORDER").innerHTML = "Now, press!"
+                document.getElementById("button0").innerHTML = "0"
+                document.getElementById("button1").innerHTML = "1"
+                document.getElementById("button2").innerHTML = "2"
+                document.getElementById("button3").innerHTML = "3"
+                document.getElementById("button4").innerHTML = "4"
+                document.getElementById("button5").innerHTML = "5"
+                document.getElementById("button6").innerHTML = "6"
+                document.getElementById("button7").innerHTML = "7"
+                document.getElementById("button8").innerHTML = "8"
+                k = 1
+                l = 1
+                m = 1
+                n = 1
+                o = 1
+                p = 1
+                q = 1
+                r = 1
+                s = 0
+                orderStored = 6
+                order = 6
+                part = 0
+                ready = 1
+            }
+            function order7(){
+                document.getElementById("button0").innerHTML = ""
+                document.getElementById("button1").innerHTML = ""
+                document.getElementById("button2").innerHTML = ""
+                document.getElementById("button9").innerHTML = ""
+                document.getElementById("button8").innerHTML = ""
+                document.getElementById("button7").innerHTML = ""
+                document.getElementById("button6").innerHTML = ""
+                document.getElementById("button5").innerHTML = ""
+                document.getElementById("button4").innerHTML = ""
+                document.getElementById("button3").innerHTML = ""
+                document.getElementById("ORDER").innerHTML = "This one is slower, but has a way longer chain of inputs. Almost double the length of the last one."
+                ready = 0
+                if (started == 0){
+            document.getElementById("button").innerHTML = ""
+            started = 1
+            }
+                setTimeout(order7a, 10000)
+                }
+            function order7a(){
+                document.getElementById("ORDER").innerHTML = "5"
+                setTimeout(order7b, 600)
+            }
+            function order7b(){
+                document.getElementById("ORDER").innerHTML = "3"
+                setTimeout(order7c, 600)
+            }
+            function order7c(){
+                document.getElementById("ORDER").innerHTML = "8"
+                setTimeout(order7d, 600)
+            }
+            function order7d(){
+                document.getElementById("ORDER").innerHTML = "2 & 7"
+                setTimeout(order7e, 1000)
+            }
+            function order7e(){
+                document.getElementById("ORDER").innerHTML = "4"
+                setTimeout(order7f, 600)
+            }
+            function order7f(){
+                document.getElementById("ORDER").innerHTML = "8"
+                setTimeout(order7g, 600)
+            }
+            function order7g(){
+                document.getElementById("ORDER").innerHTML = "9"
+                setTimeout(order7h, 600)
+            }
+            function order7h(){
+                document.getElementById("ORDER").innerHTML = "2"
+                setTimeout(order7i, 600)
+            }
+            function order7i(){
+                document.getElementById("ORDER").innerHTML = "3 & 3 & 9"
+                setTimeout(order7go, 1400)
+            }
+            function order7go(){
+                document.getElementById("ORDER").innerHTML = "Now, press!"
+                document.getElementById("button0").innerHTML = "0"
+                document.getElementById("button1").innerHTML = "1"
+                document.getElementById("button2").innerHTML = "2"
+                document.getElementById("button3").innerHTML = "3"
+                document.getElementById("button4").innerHTML = "4"
+                document.getElementById("button5").innerHTML = "5"
+                document.getElementById("button6").innerHTML = "6"
+                document.getElementById("button7").innerHTML = "7"
+                document.getElementById("button8").innerHTML = "8"
+                document.getElementById("button9").innerHTML = "9"
+                k = 1
+                l = 1
+                m = 1
+                n = 1
+                o = 1
+                p = 1
+                q = 1
+                r = 1
+                s = 1
+                t = 1
+                orderStored = 7
+                order = 7
+                part = 0
+                ready = 1
+            }
+            function order8go(){
+                document.getElementById("ORDER").innerHTML = "Can you STILL remember what button inputs were required in Level 2?"
+                document.getElementById("button0").innerHTML = "0"
+                document.getElementById("button1").innerHTML = "1"
+                document.getElementById("button2").innerHTML = "2"
+                document.getElementById("button3").innerHTML = "3"
+                document.getElementById("button4").innerHTML = "4"
+                document.getElementById("button5").innerHTML = "5"
+                document.getElementById("button6").innerHTML = "6"
+                document.getElementById("button7").innerHTML = "7"
+                document.getElementById("button8").innerHTML = "8"
+                document.getElementById("button9").innerHTML = "9"
+                k = 1
+                l = 1
+                m = 1
+                n = 1
+                o = 1
+                p = 1
+                q = 1
+                r = 1
+                s = 1
+                t = 1
+                orderStored = 8
+                order = 8
+                part = 0
+                ready = 1
+                buttonsdisabled = 1
+            }
+            function order9(){
+                document.getElementById("button0").innerHTML = ""
+                document.getElementById("button1").innerHTML = ""
+                document.getElementById("button2").innerHTML = ""
+                document.getElementById("button9").innerHTML = ""
+                document.getElementById("button8").innerHTML = ""
+                document.getElementById("button7").innerHTML = ""
+                document.getElementById("button6").innerHTML = ""
+                document.getElementById("button5").innerHTML = ""
+                document.getElementById("button4").innerHTML = ""
+                document.getElementById("button3").innerHTML = ""
+                document.getElementById("ORDER").innerHTML = "This one requires you to think in directions."
+                ready = 0
+                if (started == 0){
+            document.getElementById("button").innerHTML = ""
+            started = 1
+            }
+                setTimeout(order9a, 6000)
+                }
+            function order9a(){
+                document.getElementById("ORDER").innerHTML = "Button 9"
+                setTimeout(order9b, 1500)
+            }
+            function order9b(){
+                document.getElementById("ORDER").innerHTML = "3 to the left"
+                setTimeout(order9c, 1500)
+            }
+            function order9c(){
+                document.getElementById("ORDER").innerHTML = "The second leftmost button"
+                setTimeout(order9d, 1500)
+            }
+            function order9d(){
+                document.getElementById("ORDER").innerHTML = "The button that was pressed at the beginning"
+                setTimeout(order9e, 2500)
+            }
+            function order9e(){
+                document.getElementById("ORDER").innerHTML = "The button that is now labeled 4"
+                setTimeout(order9f, 2500)
+            }
+            function order9f(){
+                document.getElementById("ORDER").innerHTML = "The button in the position of the two leftmost buttons subtracted"
+                setTimeout(order9g, 3500)
+            }
+            function order9g(){
+                document.getElementById("ORDER").innerHTML = "The button with the position number of the button pressed in the last press"
+                setTimeout(order9h, 3500)
+            }
+            function order9h(){
+                document.getElementById("ORDER").innerHTML = "One note: The subtraction shouldn't have ANY negative numbers."
+                setTimeout(order9go, 4900)
+            }
+            function order9go(){
+                document.getElementById("ORDER").innerHTML = "Now, press!"
+                document.getElementById("button0").innerHTML = "0"
+                document.getElementById("button1").innerHTML = "1"
+                document.getElementById("button2").innerHTML = "2"
+                document.getElementById("button3").innerHTML = "3"
+                document.getElementById("button4").innerHTML = "4"
+                document.getElementById("button5").innerHTML = "5"
+                document.getElementById("button6").innerHTML = "6"
+                document.getElementById("button7").innerHTML = "7"
+                document.getElementById("button8").innerHTML = "8"
+                document.getElementById("button9").innerHTML = "9"
+                k = 1
+                l = 1
+                m = 1
+                n = 1
+                o = 1
+                p = 1
+                q = 1
+                r = 1
+                s = 1
+                t = 1
+                orderStored = 9
+                order = 9
+                part = 0
+                ready = 1
+            }
+            function order10(){
+                document.getElementById("button0").innerHTML = ""
+                document.getElementById("button1").innerHTML = ""
+                document.getElementById("button2").innerHTML = ""
+                document.getElementById("button9").innerHTML = ""
+                document.getElementById("button8").innerHTML = ""
+                document.getElementById("button7").innerHTML = ""
+                document.getElementById("button6").innerHTML = ""
+                document.getElementById("button5").innerHTML = ""
+                document.getElementById("button4").innerHTML = ""
+                document.getElementById("button3").innerHTML = ""
+                document.getElementById("ORDER").innerHTML = "This last one is pretty mind-boggling. Buttons switch each press. You're allowed to take notes. Remember that position orders are always 0-9! Oh wait, I'll make notes for you."
+                ready = 0
+                if (started == 0){
+            document.getElementById("button").innerHTML = ""
+            started = 1
+            }
+                setTimeout(order10a, 16000)
+                }
+            function order10a(){
+                document.getElementById("ORDER").innerHTML = "The second button's number in position value"
+                setTimeout(order10b, 7500)
+            }
+            function order10b(){
+                document.getElementById("ORDER").innerHTML = "The amount to the left that is on the button on the right of the button you pressed"
+                setTimeout(order10c, 7500)
+            }
+            function order10c(){
+                document.getElementById("ORDER").innerHTML = "The second rightmost button, then as much to the left as the button on the right would've told you to go last press"
+                setTimeout(order10d, 7500)
+            }
+            function order10d(){
+                document.getElementById("ORDER").innerHTML = "The number of the button that you pressed first now has (if you pressed 4 first, press the button labeled 4)"
+                setTimeout(order10e, 7500)
+            }
+            function order10e(){
+                document.getElementById("ORDER").innerHTML = "The number of the button is the position the button that is now labeled 7 is in"
+                setTimeout(order10f, 7500)
+            }
+            function order10f(){
+                document.getElementById("ORDER").innerHTML = "The two last pressed buttons subtracted from each other converted into position"
+                setTimeout(order10g, 7500)
+            }
+            function order10g(){
+                document.getElementById("ORDER").innerHTML = "The button that is in the right position... and the number on its left to the left"
+                setTimeout(order10h, 7500)
+            }
+            function order10h(){
+                document.getElementById("ORDER").innerHTML = "The button with the number that was pressed in Level 4, press 6"
+                setTimeout(order10go, 7500)
+            }
+            function order10go(){
+                window.open("file:///Users/amonrosik/Desktop/Website/cheatsheet.html")
+                document.getElementById("ORDER").innerHTML = "Now, press!"
+                document.getElementById("button0").innerHTML = "6"
+                document.getElementById("button1").innerHTML = "9"
+                document.getElementById("button2").innerHTML = "2"
+                document.getElementById("button3").innerHTML = "0"
+                document.getElementById("button4").innerHTML = "5"
+                document.getElementById("button5").innerHTML = "1"
+                document.getElementById("button6").innerHTML = "7"
+                document.getElementById("button7").innerHTML = "8"
+                document.getElementById("button8").innerHTML = "3"
+                document.getElementById("button9").innerHTML = "4"
+                k = 1
+                l = 1
+                m = 1
+                n = 1
+                o = 1
+                p = 1
+                q = 1
+                r = 1
+                s = 1
+                t = 1
+                orderStored = 10
+                order = 10
+                part = 0
+                ready = 1
+            }
+            function a(){
+                if (order == 1 && part == 0) {
+                    part = 1
+                } else if (order == 1 && part == 3) {
+                    part = 4
+                } else if (order == 2 && part == 1) {
+                    part = 2
+                } else if (order == 2 && part == 4) {
+                    part = 5
+                } else if (order == 4 && part == 6) {
+                    part = 7
+                } else if (order == 6 && part == 6) {
+                    part = 7
+                    alert('LEVEL 6 DONE!')
+                    order7()
+                } else if (order == 8 && part == 1) {
+                    part = 2
+                } else if (order == 8 && part == 4) {
+                    part = 5
+                } else if (ready == 0) {
+                    
+                } else if(k == 0) {
+                    alert ('Button deactivated.')
+                } else {
+                    alert('WROOOOOOOOOOOOOONG!')
+                    fail()
+                }
+            }
+            function b(){
+                if (order == 1 && part == 2) {
+                    part = 3
+                } else if (order == 1 && part == 4) {
+                    part = 5
+                    alert('LEVEL 1 DONE!')
+                    order2()
+                } else if (order == 3 && part == 1) {
+                    part = 2
+                } else if (order == 3 && part == 6) {
+                    part = 7
+                } else if (order == 5 && part == 3) {
+                    part = 4
+                } else if (order == 4 && part == 1) {
+                    part = 2
+                } else if (order == 9 && part == 2) {
+                    part = 3
+                } else if (order == 10 && part == 3) {
+                    part = 4
+                document.getElementById("button0").innerHTML = "0"
+                document.getElementById("button1").innerHTML = "1"
+                document.getElementById("button2").innerHTML = "7"
+                document.getElementById("button3").innerHTML = "9"
+                document.getElementById("button4").innerHTML = "3"
+                document.getElementById("button5").innerHTML = "4"
+                document.getElementById("button6").innerHTML = "2"
+                document.getElementById("button7").innerHTML = "6"
+                document.getElementById("button8").innerHTML = "5"
+                document.getElementById("button9").innerHTML = "8"
+                } else if (ready == 0) {
+                    
+                } else if (l == 0) {
+                    alert ('Button deactivated.')
+                } else {
+                    alert('WROOOOOOOOOOOOOONG!')
+                    fail()
+                }
+            }
+            function c(){
+                if (order == 1 && part == 1) {
+                    part = 2
+                } else if (order == 2 && part == 5) {
+                    part = 6
+                    alert ('LEVEL 2 DONE!')
+                    order3()
+                } else if (order == 4 && part == 5) {
+                    part = 6
+                } else if (order == 5 && part == 2) {
+                    part = 3
+                } else if (order == 7 && part == 3) {
+                    part = 4
+                } else if (order == 7 && part == 8) {
+                    part = 9
+                } else if (order == 8 && part == 5) {
+                    part = 6
+                    alert('LEVEL 8 DONE! I told you this was a memory game, did I not?')
+                    buttonsdisabled = 0
+                    order9()
+                } else if (order == 9 && part == 4) {
+                    part = 5
+                } else if (order == 9 && part == 5) {
+                    part = 6
+                } else if (order == 10 && part == 5) {
+                    part = 6
+                document.getElementById("button0").innerHTML = "2"
+                document.getElementById("button1").innerHTML = "7"
+                document.getElementById("button2").innerHTML = "3"
+                document.getElementById("button3").innerHTML = "8"
+                document.getElementById("button4").innerHTML = "0"
+                document.getElementById("button5").innerHTML = "5"
+                document.getElementById("button6").innerHTML = "1"
+                document.getElementById("button7").innerHTML = "6"
+                document.getElementById("button8").innerHTML = "4"
+                document.getElementById("button9").innerHTML = "9"
+                } else if (ready == 0) {
+                    
+                } else if(m == 0) {
+                    alert ('Button deactivated.')
+                } else {
+                    alert('WROOOOOOOOOOOOOONG!')
+                    fail()
+                }
+            }
+            function d(){
+                if (order == 2 && part == 0) {
+                    part = 1
+                } else if (order == 2 && part == 2) {
+                    part = 3
+                } else if (order == 4 && part == 7) {
+                    part = 8
+                    alert('LEVEL 4 DONE!')
+                    order5()
+                } else if (order == 7 && part == 1) {
+                    part = 2
+                } else if (order == 7 && part == 9) {
+                    part = 10
+                } else if (order == 7 && part == 10) {
+                    part = 11
+                } else if (ready == 0) {
+                    
+                } else if (order == 8 && part == 0) {
+                    part = 1
+                } else if (order == 8 && part == 2) {
+                    part = 3
+                } else if (order == 6 && part == 2) {
+                    part = 3
+                } else if (n == 0) {
+                    alert ('Button deactivated.')
+                } else {
+                    alert('WROOOOOOOOOOOOOONG!')
+                    fail()
+                }
+            }
+            function e(){
+                if (order == 2 && part == 3) {
+                    part = 4
+                } else if (order == 3 && part == 3) {
+                    part = 4
+                } else if (order == 4 && part == 4) {
+                    part = 5
+                } else if (order == 5 && part == 0) {
+                    part = 1
+                } else if (order == 5 && part == 5) {
+                    part = 6
+                } else if (order == 6 && part == 1) {
+                    part = 2
+                } else if (order == 6 && part == 3) {
+                    part = 4
+                } else if (order == 6 && part == 4) {
+                    part = 5
+                } else if (order == 7 && part == 5) {
+                    part = 6
+                } else if (order == 8 && part == 3) {
+                    part = 4
+                } else if (order == 9 && part == 6) {
+                    part = 7
+                    alert('LEVEL 9 DONE! I mean, you are almost at the end! Congratulations!')
+                    order10()
+                } else if (order == 10 && part == 1) {
+                    part = 2
+                document.getElementById("button0").innerHTML = "7"
+                document.getElementById("button1").innerHTML = "3"
+                document.getElementById("button2").innerHTML = "9"
+                document.getElementById("button3").innerHTML = "4"
+                document.getElementById("button4").innerHTML = "5"
+                document.getElementById("button5").innerHTML = "2"
+                document.getElementById("button6").innerHTML = "1"
+                document.getElementById("button7").innerHTML = "0"
+                document.getElementById("button8").innerHTML = "6"
+                document.getElementById("button9").innerHTML = "8"
+                } else if (ready == 0) {
+                    
+                } else if (o == 0) {
+                    alert ('Button deactivated.')
+                } else {
+                    alert('WROOOOOOOOOOOOOONG!')
+                    fail()
+                }
+            }
+            function f(){
+                if (order == 3 && part == 0) {
+                    part = 1
+                } else if (order == 3 && part == 2) {
+                    part = 3
+                } else if (order == 3 && part == 5) {
+                    part = 6
+                } else if (order == 4 && part == 3) {
+                    part = 4
+                } else if (order == 5 && part == 4) {
+                    part = 5
+                } else if (order == 7 && part == 0) {
+                    part = 1
+                } else if (order == 10 && part == 2) {
+                    part = 3
+                document.getElementById("button0").innerHTML = "2"
+                document.getElementById("button1").innerHTML = "4"
+                document.getElementById("button2").innerHTML = "5"
+                document.getElementById("button3").innerHTML = "7"
+                document.getElementById("button4").innerHTML = "0"
+                document.getElementById("button5").innerHTML = "9"
+                document.getElementById("button6").innerHTML = "8"
+                document.getElementById("button7").innerHTML = "6"
+                document.getElementById("button8").innerHTML = "3"
+                document.getElementById("button9").innerHTML = "1"
+                } else if (order == 10 && part == 6) {
+                    part = 7
+                document.getElementById("button0").innerHTML = "4"
+                document.getElementById("button1").innerHTML = "0"
+                document.getElementById("button2").innerHTML = "8"
+                document.getElementById("button3").innerHTML = "6"
+                document.getElementById("button4").innerHTML = "9"
+                document.getElementById("button5").innerHTML = "1"
+                document.getElementById("button6").innerHTML = "7"
+                document.getElementById("button7").innerHTML = "5"
+                document.getElementById("button8").innerHTML = "3"
+                document.getElementById("button9").innerHTML = "2"
+                } else if (ready == 0) {
+                    
+                } else  if (p == 0) {
+                    alert ('Button deactivated.')
+                } else {
+                    alert('WROOOOOOOOOOOOOONG!')
+                    fail()
+                }
+            }
+            function g(){
+                if (order == 3 && part == 4) {
+                    part = 5
+                } else if (order == 3 && part == 7) {
+                    part = 8
+                    alert('LEVEL 3 DONE!')
+                    order4()
+                } else if (order == 4 && part == 0) {
+                    part = 1
+                } else if (order == 5 && part == 6) {
+                    part = 7
+                    alert('LEVEL 5 DONE!')
+                    order6()
+                } else if (order == 9 && part == 1) {
+                    part = 2
+                } else if (order == 10 && part == 4) {
+                    part = 5
+                document.getElementById("button0").innerHTML = "4"
+                document.getElementById("button1").innerHTML = "0"
+                document.getElementById("button2").innerHTML = "3"
+                document.getElementById("button3").innerHTML = "7"
+                document.getElementById("button4").innerHTML = "5"
+                document.getElementById("button5").innerHTML = "2"
+                document.getElementById("button6").innerHTML = "8"
+                document.getElementById("button7").innerHTML = "1"
+                document.getElementById("button8").innerHTML = "9"
+                document.getElementById("button9").innerHTML = "6"
+                } else if (order == 10 && part == 2) {
+                    part = 3
+                document.getElementById("button0").innerHTML = "2"
+                document.getElementById("button1").innerHTML = "4"
+                document.getElementById("button2").innerHTML = "5"
+                document.getElementById("button3").innerHTML = "7"
+                document.getElementById("button4").innerHTML = "0"
+                document.getElementById("button5").innerHTML = "9"
+                document.getElementById("button6").innerHTML = "8"
+                document.getElementById("button7").innerHTML = "6"
+                document.getElementById("button8").innerHTML = "3"
+                document.getElementById("button9").innerHTML = "1"
+                } else if (ready == 0) {
+                    
+                } else  if(q == 0) {
+                    alert ('Button deactivated.')
+                } else {
+                    alert('WROOOOOOOOOOOOOONG!')
+                    fail()
+                }
+            }
+            function h(){
+                if (order == 4 && part == 2) {
+                    part = 3
+                } else if (order == 5 && part == 1) {
+                    part = 2
+                } else if (order == 6 && part == 5) {
+                    part = 6
+                } else if (order == 7 && part == 4) {
+                    part = 5
+                } else if (ready == 0) {
+                    
+                } else if (r == 0) {
+                    alert('Button deactivated.')
+                } else {
+                    alert('WROOOOOOOOOOOOOONG!')
+                    fail()
+                }
+            }
+            function i(){
+                if (order == 6 && part == 0) {
+                    part = 1
+                } else if (order == 7 && part == 2) {
+                    part = 3
+                } else if (order == 7 && part == 6) {
+                    part = 7
+                } else if (ready == 0) {
+                    
+                } else if(s == 0) {
+                    alert ('Button deactivated.')
+                } else {
+                    alert('WROOOOOOOOOOOOOONG!')
+                    fail()
+                }
+            }
+            function j(){
+                if (order == 7 && part == 7) {
+                    part = 8
+                } else if (order == 7 && part == 11) {
+                    part = 12
+                    alert('LEVEL 7 DONE! I bet you needed more than 1 try to beat this.')
+                    alert('Looks like the Puzzlemaster who locked me up in the code did his job right... sadly.')
+                    alert('I forgot if I said this before...')
+                    order8go()
+                } else if (order == 8 && part == 0) {
+                    part = 1
+                } else if (order == 9 && part == 0) {
+                    part = 1
+                } else if (order == 9 && part == 3) {
+                    part = 4
+                document.getElementById("button0").innerHTML = "8"
+                document.getElementById("button1").innerHTML = "6"
+                document.getElementById("button2").innerHTML = "4"
+                document.getElementById("button3").innerHTML = "1"
+                document.getElementById("button4").innerHTML = "2"
+                document.getElementById("button5").innerHTML = "0"
+                document.getElementById("button6").innerHTML = "5"
+                document.getElementById("button7").innerHTML = "3"
+                document.getElementById("button8").innerHTML = "9"
+                document.getElementById("button9").innerHTML = "7"
+                } else if (order == 10 && part == 0) {
+                    part = 1
+                document.getElementById("button0").innerHTML = "5"
+                document.getElementById("button1").innerHTML = "3"
+                document.getElementById("button2").innerHTML = "1"
+                document.getElementById("button3").innerHTML = "6"
+                document.getElementById("button4").innerHTML = "8"
+                document.getElementById("button5").innerHTML = "4"
+                document.getElementById("button6").innerHTML = "9"
+                document.getElementById("button7").innerHTML = "0"
+                document.getElementById("button8").innerHTML = "7"
+                document.getElementById("button9").innerHTML = "2"
+                } else if (order == 10 && part == 7) {
+                    part = 8
+                alert('CONGRATULATIONS! YOU SUCCESSFULLY BEAT THE MEMORY GAME! Was it hard? Well, sorry, but that was NOT the last of it. The next minigame will appear shortly.')
+                YOUWIN()
+                } else if (ready == 0) {
+                    
+                } else if(t == 0) {
+                    alert ('Button deactivated.')
+                } else {
+                    alert('WROOOOOOOOOOOOOONG!')
+                    fail()
+                }
+            }
+            setInterval(partShown, 10)
+            function partShown(){
+                document.getElementById("showPart").innerHTML = part
+                document.getElementById("showOrder").innerHTML = order
+                document.getElementById("showmaxLevel").innerHTML = level
+            }
+            function order1(){
+                if (buttonsdisabled == 0){
+                    if (level < 1){
+                    alert('That level has not been unlocked yet!')
+                } else {
+                order1a()
+                }
+                } else {
+                    alert('Clever. Trying to go to Level 1 to avoid the Level 2 block. But no, that does not work.')
+                }
+            }
+            function order2pre(){
+                if (buttonsdisabled == 0){
+                if (level < 2){
+                    alert('That level has not been unlocked yet!')
+                } else {
+                order2a()
+                }
+                } else {
+                    alert('You are trying to find the answer to Level 8, huh? Sorry, no. I do NOT condone looking up an answer like this.')
+                }
+            }
+            function order3pre(){
+                if (level < 3){
+                    alert('That level has not been unlocked yet!')
+                } else {
+                order3a()
+                }
+            }
+            function order4pre(){
+                if (level < 4){
+                    alert('That level has not been unlocked yet!')
+                } else {
+                order4a()
+                }
+            }
+            function order5pre(){
+                if (level < 5){
+                    alert('That level has not been unlocked yet!')
+                } else {
+                order5a()
+                }
+            }
+            function order6pre(){
+                if (level < 4){
+                    alert('That level has not been unlocked yet!')
+                } else {
+                order6a()
+                }
+            }
+            function order7pre(){
+                if (level < 7){
+                    alert('That level has not been unlocked yet!')
+                } else {
+                order7a()
+                }
+            }
+            function order8pre(){
+                if (level < 8){
+                    alert('That level has not been unlocked yet!')
+                } else {
+                order8a()
+                }
+            }
+            function order9pre(){
+                if (level < 9){
+                    alert('That level has not been unlocked yet!')
+                } else {
+                order9a()
+                }
+            }
+            function order10pre(){
+                if (level < 10){
+                    alert('That level has not been unlocked yet!')
+                } else {
+                order10a()
+                }
+            }
+            function YOUWIN(){
+                k = 0
+                l = 0
+                m = 0
+                n = 0
+                o = 0
+                p = 0
+                q = 0
+                r = 0
+                s = 0
+                t = 0
+                document.getElementById("button0").innerHTML = "H"
+                document.getElementById("button1").innerHTML = "A"
+                document.getElementById("button2").innerHTML = "L"
+                document.getElementById("button3").innerHTML = "L"
+                document.getElementById("button4").innerHTML = "E"
+                document.getElementById("button5").innerHTML = "L"
+                document.getElementById("button6").innerHTML = "U"
+                document.getElementById("button7").innerHTML = "J"
+                document.getElementById("button8").innerHTML = "A"
+                document.getElementById("button9").innerHTML = "H"
+                document.getElementById("ORDER").innerHTML = "YOU WIN. BUT YOU WILL HAVE TO WORK HARDER TO FREE HIM."
+                setTimeout(YOUWINa, 1000)
+            }
+                function YOUWINa(){
+                    document.getElementById("GO ON.").innerHTML = "G"
+                    setTimeout(YOUWINb, 200)
+                }
+                function YOUWINb(){
+                    document.getElementById("GO ON.").innerHTML += "O"
+                    setTimeout(YOUWINc, 200)
+                }
+                function YOUWINc(){
+                    document.getElementById("GO ON.").innerHTML += " "
+                    setTimeout(YOUWINd, 200)
+                }
+                function YOUWINd(){
+                    document.getElementById("GO ON.").innerHTML += "O"
+                    setTimeout(YOUWINe, 200)
+                }
+                function YOUWINe(){
+                    document.getElementById("GO ON.").innerHTML += "N"
+                    setTimeout(YOUWINf, 200)
+                }
+                function YOUWINf(){
+                    document.getElementById("GO ON.").innerHTML += "."
+                }
+                function levelSetter(){
+                    if (level < order){
+                        level = order
+                    }
+                }
+                setInterval(levelSetter, 10)
+                
+        </script>
+    <br><br>
+    <p>Level Select (Be careful, the game might break if you use it!)</p>
+    <button onclick="order1()">Level 1</button>
+    <button onclick="order2pre()">Level 2</button>
+    <button onclick="order3pre()">Level 3</button>
+    <button onclick="order4pre()">Level 4</button>
+    <button onclick="order5pre()">Level 5</button><br>
+    <button onclick="order6pre()">Level 6</button>
+    <button onclick="order7pre()">Level 7</button>
+    <button onclick="order8pre()">Level 8</button>
+    <button onclick="order9pre()">Level 9</button>
+    <button onclick="order10pre()">Level 10</button>
+    </body>
+        </html>
